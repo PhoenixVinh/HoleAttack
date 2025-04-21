@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace _Scripts.Hole
@@ -7,7 +8,8 @@ namespace _Scripts.Hole
     {
         private Vector2 _movementDirection;
         private float _speedMovement;
-        
+        private bool canMove = true;
+  
         
         
         public void Move(Vector2 movementDirection)
@@ -16,15 +18,48 @@ namespace _Scripts.Hole
         }
 
 
-        private void Update()
+        private void FixedUpdate()
         {
-            transform.Translate(new Vector3(_movementDirection.x, 0, _movementDirection.y)*_speedMovement*Time.deltaTime);
+            
+            CheckCanMove();
+            if (canMove)
+            {
+                transform.Translate(new Vector3(_movementDirection.x, 0, _movementDirection.y)*_speedMovement*Time.deltaTime);
+            }
         }
+
+
+
+
+
+        public void CheckCanMove()
+        {
+            RaycastHit hitInfo;
+            Physics.Raycast(transform.position, new Vector3(_movementDirection.x, 0, _movementDirection.y), out hitInfo, 1f * HoleController.Instance.GetCurrentScale(), LayerMask.GetMask("Bound"));
+            if (hitInfo.collider != null)
+            {
+                if (hitInfo.collider.gameObject.CompareTag("Wall"))
+                {
+                    Debug.Log(hitInfo.collider.gameObject.name);
+                    canMove = false;
+                }
+            }
+            else canMove = true;
+        }
+
+
+
 
 
         public void SetSpeedMovement(float speedMovement)
         {
             this._speedMovement = speedMovement;
+        }
+
+        public void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawRay(transform.position,  new Vector3(_movementDirection.x, 0, _movementDirection.y) * 2);
         }
     }
 }

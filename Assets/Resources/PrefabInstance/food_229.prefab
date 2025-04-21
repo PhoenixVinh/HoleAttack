@@ -65,7 +65,7 @@ GameObject:
   - component: {fileID: 64436827000238558}
   m_Layer: 7
   m_Name: Cylinder_Shadow
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 23689228406307034}
   m_Layer: 7
   m_Name: M_Currency_Coin_01 (1)
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 199643971571744715}
   m_Layer: 7
   m_Name: VFX_PernamentSpark_SpecialItems3D
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

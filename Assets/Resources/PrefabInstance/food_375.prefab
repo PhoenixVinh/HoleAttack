@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 65536334365624557}
   m_Layer: 7
   m_Name: Cardboard_Box_02 (1)
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

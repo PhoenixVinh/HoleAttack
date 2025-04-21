@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 64296268207488897}
   m_Layer: 7
   m_Name: Col
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3002,7 +3002,7 @@ GameObject:
   - component: {fileID: 4464087412902865}
   m_Layer: 7
   m_Name: Pizza M
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -726,7 +726,7 @@ GameObject:
   - component: {fileID: 64784842477801782}
   m_Layer: 7
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2017,7 +2017,7 @@ GameObject:
   - component: {fileID: 65390720961252124}
   m_Layer: 7
   m_Name: Burger B
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

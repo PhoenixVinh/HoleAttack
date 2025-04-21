@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 64202639907600116}
   m_Layer: 7
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 23446860236282234}
   m_Layer: 7
   m_Name: PaintContainer_Green_Changed
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

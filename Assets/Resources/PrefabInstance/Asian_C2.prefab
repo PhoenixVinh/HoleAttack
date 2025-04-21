@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64887835434393783}
   m_Layer: 7
   m_Name: Quad
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 23117466519408111}
   m_Layer: 7
   m_Name: M_Sand_Corner
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

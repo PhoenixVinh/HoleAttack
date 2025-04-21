@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 136452036939469850}
   m_Layer: 7
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 23563940211514544}
   m_Layer: 7
   m_Name: DHP_PRE_Jelly_roll_512
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

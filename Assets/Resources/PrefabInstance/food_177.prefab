@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4669313311027129}
   m_Layer: 7
   m_Name: robot
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 65552999520408576}
   m_Layer: 7
   m_Name: Col
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

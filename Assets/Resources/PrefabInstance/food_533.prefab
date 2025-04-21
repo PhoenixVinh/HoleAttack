@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 64219461430658773}
   m_Layer: 7
   m_Name: FFHP_PRE_Dip_ketchup_1024
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -23,7 +23,7 @@ namespace _Scripts.UI.MissionUI
         {
             Instance = this;
             //Genetate Data for Mission 
-            CreateMissions();
+            
 
 
         }
@@ -94,6 +94,12 @@ namespace _Scripts.UI.MissionUI
                 }
             }
             return results;
+        }
+
+        public void SetData(MissionSO  mission)
+        {
+            this.MissionsSO = mission;
+            CreateMissions();
         }
     }
 }

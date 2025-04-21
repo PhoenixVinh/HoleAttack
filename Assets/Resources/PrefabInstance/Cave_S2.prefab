@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23888122208774399}
   m_Layer: 7
   m_Name: Quad
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 64860891442577622}
   m_Layer: 7
   m_Name: M_Sand_Side
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class ColdownTime : MonoBehaviour, IPrecent
 {
+    
+    public static ColdownTime Instance;
+    
+    
     private TMP_Text _txtDisplayTime;
     private Slider _slider;
     
@@ -18,12 +22,17 @@ public class ColdownTime : MonoBehaviour, IPrecent
     private bool isStartColdown = false;
 
 
+
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
         _timeColdown = ColdownTimeComplete;
         _txtDisplayTime = transform.Find("LabelTime").GetComponent<TMP_Text>();
         _slider = transform.GetChild(1).GetComponent<Slider>();
-        isStartColdown = true;
+
     }
 
 
@@ -81,7 +90,19 @@ public class ColdownTime : MonoBehaviour, IPrecent
     {
         this.isStartColdown = true;
     }
-    
-    
-    
+
+
+
+
+    public void SetData(float levelTimeToComplete)
+    {
+        this.ColdownTimeComplete = levelTimeToComplete;
+        this._timeColdown = ColdownTimeComplete;
+        StartColdown();
+    }
+
+    public void AddTime(float timeAdd)
+    {
+        this._timeColdown += timeAdd;
+    }
 }

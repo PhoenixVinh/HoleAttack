@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4852897820341533}
   m_Layer: 7
   m_Name: Visual_Breakfast_Ground
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -1,0 +1,54 @@
+using System;
+using _Scripts.ManagerScene;
+using _Scripts.UI.PauseGameUI;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+namespace _Scripts.UI.WinLossUI
+{
+    public class LossUI: PauseGame
+    {
+        public Button playOnBtn;
+        public Button retryBtn;
+        public Button homeBtn;
+
+        
+        public float timeAdd = 60f;
+        private void Start()
+        {
+            playOnBtn.onClick.AddListener(OnClickPlayOnBtn);
+            retryBtn.onClick.AddListener(OnClickRetryBtn);
+            homeBtn.onClick.AddListener(OnClickHomeBtn);
+        }
+
+        private void OnClickHomeBtn()
+        {
+            this.gameObject.SetActive(false);
+            SceneManager.LoadScene(EnumScene.HomeScene.ToString());
+        }
+
+        private void OnClickRetryBtn()
+        {
+            AddTimeGamePlay();
+            this.gameObject.SetActive(false);   
+        }
+
+        private void OnClickPlayOnBtn()
+        {
+            // Check if have enough gold then minus it and Add Time to the Game play 
+            
+            AddTimeGamePlay();
+            this.gameObject.SetActive(false);   
+            
+        }
+        
+        
+
+
+        public void AddTimeGamePlay()
+        {
+            ColdownTime.Instance.AddTime(timeAdd);
+        }
+    }
+}

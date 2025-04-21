@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 64785616800565532}
   m_Layer: 7
   m_Name: Col
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -771,7 +771,7 @@ GameObject:
   - component: {fileID: 4048869048675276}
   m_Layer: 7
   m_Name: Ice Cream M
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

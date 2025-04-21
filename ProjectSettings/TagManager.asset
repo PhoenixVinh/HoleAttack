@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Item
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - NoCollision
   - Mask
   - Masked
-  - 
+  - Bound
   - 
   - 
   - 

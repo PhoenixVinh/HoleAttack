@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23158354727274990}
   m_Layer: 7
   m_Name: Mug01_Matcha02
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 64281636812233111}
   m_Layer: 7
   m_Name: can_008
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

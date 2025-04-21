@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 64951817882284056}
   m_Layer: 7
   m_Name: DHP_PRE_Pound_cake_512
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

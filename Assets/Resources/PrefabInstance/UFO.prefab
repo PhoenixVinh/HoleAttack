@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64007797880212393}
   m_Layer: 7
   m_Name: ufo
-  m_TagString: FallingItem_Physics
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 199322899147527276}
   m_Layer: 7
   m_Name: VFX_PernamentSpark_SpecialItems3D
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

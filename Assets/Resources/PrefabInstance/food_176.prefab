@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23954520465506458}
   m_Layer: 7
   m_Name: Dollhouse_Changed
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 65143427966585896}
   m_Layer: 7
   m_Name: Col
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

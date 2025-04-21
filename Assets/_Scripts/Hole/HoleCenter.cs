@@ -23,6 +23,7 @@ public class HoleCenter : MonoBehaviour
         if (other.CompareTag("Item"))
         {
             other.transform.parent.GetComponent<Rigidbody>().isKinematic = false;
+            other.transform.parent.gameObject.layer = LayerMask.NameToLayer(LayerMaskVariable.NoCollision.ToString());
             other.gameObject.layer = LayerMask.NameToLayer(LayerMaskVariable.NoCollision.ToString());
             
         }
@@ -60,7 +61,7 @@ public class HoleCenter : MonoBehaviour
         if (other.CompareTag("Item"))
         {
             other.gameObject.layer = LayerMask.NameToLayer(LayerMaskVariable.Collision.ToString());
-            //other.gameObject.GetComponent<Item>().InTheHole = false;
+ 
         }
     }
 }

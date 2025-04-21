@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 199536909805811878}
   m_Layer: 7
   m_Name: VFX_PernamentSpark_SpecialItems3D
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4581,7 +4581,7 @@ GameObject:
   - component: {fileID: 64710884885363778}
   m_Layer: 7
   m_Name: Bonus_Lightning (1)
-  m_TagString: FallingItem_Physics
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

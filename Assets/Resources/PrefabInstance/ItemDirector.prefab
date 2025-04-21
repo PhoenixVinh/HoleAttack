@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 114358690013841362}
   m_Layer: 7
   m_Name: pointer
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 114917792163399639}
   m_Layer: 7
   m_Name: groupActive
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

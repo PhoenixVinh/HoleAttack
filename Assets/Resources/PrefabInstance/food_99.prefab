@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 64309049493143194}
   m_Layer: 7
   m_Name: Berrry_Box_02(Clone)
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

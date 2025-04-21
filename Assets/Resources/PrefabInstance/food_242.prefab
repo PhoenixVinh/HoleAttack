@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 4677082553692562}
   m_Layer: 7
   m_Name: half_cube
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 23003777710804945}
   m_Layer: 7
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

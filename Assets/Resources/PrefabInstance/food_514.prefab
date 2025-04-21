@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 64450363731873985}
   m_Layer: 7
   m_Name: col
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 23598548934005811}
   m_Layer: 7
   m_Name: cocktail_003
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

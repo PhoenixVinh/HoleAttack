@@ -100,7 +100,7 @@ namespace _Scripts.UI.SpecialSkillUI
                 hightlight.SetActive(true);
                 
                 float distance = Vector2.Distance(new Vector2(this.transform.position.x, this.transform.position.z), new Vector2(this.mainHole.position.x, this.mainHole.position.z));
-                Debug.Log(distance);
+            
                 if (distance <= 2f)
                 {
                     hightlight.SetActive(false);

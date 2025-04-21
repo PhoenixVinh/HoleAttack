@@ -649,7 +649,7 @@ GameObject:
   - component: {fileID: 4572113408932707}
   m_Layer: 7
   m_Name: Hot Dog D
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -972,7 +972,7 @@ GameObject:
   - component: {fileID: 136235752715367234}
   m_Layer: 7
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

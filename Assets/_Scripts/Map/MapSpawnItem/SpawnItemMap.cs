@@ -1,7 +1,6 @@
-using System;
+
 using System.Collections.Generic;
-using _Scripts.Event;
-using Unity.VisualScripting;
+using _Scripts.Data.LevelGamePlayData;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -14,7 +13,7 @@ namespace _Scripts.Map.MapSpawnItem
         private void Awake()
         {
             Instance = this;
-            SpawnMap();
+            //SpawnMap();
         }
 
         
@@ -28,12 +27,23 @@ namespace _Scripts.Map.MapSpawnItem
         
         
         public Dictionary<string, List<GameObject>> mapObjects = new Dictionary<string, List<GameObject>>();
-        
-        
+
+
+
+
+        public void SetData(LevelSpawnData levelSpawnData)
+        {
+            this.levelSpawnData = levelSpawnData;
+            SpawnMap();
+        }
         
         [ContextMenu("Spawn")]
         public void SpawnMap()
         {
+            while (transform.childCount > 0)
+            {
+                DestroyImmediate(transform.GetChild(0).gameObject);
+            }
             if (levelSpawnData == null) return;
             mapObjects.Clear();
             Dictionary<string, GameObject> spawnedObjects = new Dictionary<string,GameObject>();
@@ -144,4 +154,12 @@ namespace _Scripts.Map.MapSpawnItem
             Debug.LogWarning($"Prefab '{prefabName}' not found in Resources");
             return null;
         }
-        
+        
+        public void RemoveItem(GameObject item)
+        {
+            string name = item.transform.parent.name;
+            mapObjects[name].Remove(item.transform.parent.gameObject);
+        }
+        
+    }
+}

@@ -1059,7 +1059,7 @@ GameObject:
   - component: {fileID: 65638779527497523}
   m_Layer: 7
   m_Name: Gate_Cake
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
