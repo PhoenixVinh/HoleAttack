@@ -7,31 +7,37 @@ using UnityEngine.UI;
 
 namespace _Scripts.UI.WinLossUI
 {
-    public class WinUI : MonoBehaviour
+    public class WinUI : PauseGame
     {
         public TMP_Text coinText;
         public Button continueButton;
 
+        
 
-
-        public void OnEnable()
+        public override void OnEnable()
         {
+            base.OnEnable();
             coinText.text = "75";
+            int coin = PlayerPrefs.GetInt("Coin");
+            coin += 75;
+            PlayerPrefs.SetInt("Coin", coin);
             continueButton.onClick.AddListener(ShowNextlevel);
         }
 
-        public void OnDisable()
+        public override void OnDisable()
         {
+            base.OnDisable();
             continueButton.onClick.RemoveAllListeners();
         }
 
         private void ShowNextlevel()
         {
+            
             this.gameObject.SetActive(false);
             // Change Data Level 
 
             ManagerLevelGamePlay.Instance.LoadNextLevel();
-
+           
         }
     }
 }

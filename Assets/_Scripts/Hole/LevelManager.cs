@@ -58,6 +58,11 @@ public class LevelManager : MonoBehaviour
         currentLevel = 0;
         UpdateLevel();
     }
+
+    public float GetScalelevel()
+    {
+        return datalevel.levels[currentLevel].radious;
+    }
     
     
     

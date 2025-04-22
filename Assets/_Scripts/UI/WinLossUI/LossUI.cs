@@ -1,5 +1,6 @@
 using System;
 using _Scripts.ManagerScene;
+using _Scripts.ManagerScene.HomeScene;
 using _Scripts.UI.PauseGameUI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,6 +16,7 @@ namespace _Scripts.UI.WinLossUI
 
         
         public float timeAdd = 60f;
+        public int pricePlayOn = 600;
         private void Start()
         {
             playOnBtn.onClick.AddListener(OnClickPlayOnBtn);
@@ -26,6 +28,7 @@ namespace _Scripts.UI.WinLossUI
         {
             this.gameObject.SetActive(false);
             SceneManager.LoadScene(EnumScene.HomeScene.ToString());
+            ManagerHomeScene.Instance.ShowLoseGameUI();
         }
 
         private void OnClickRetryBtn()
@@ -38,8 +41,17 @@ namespace _Scripts.UI.WinLossUI
         {
             // Check if have enough gold then minus it and Add Time to the Game play 
             
-            AddTimeGamePlay();
-            this.gameObject.SetActive(false);   
+           
+            int coin = PlayerPrefs.GetInt("Coin");
+            if (coin >= pricePlayOn)
+            {
+                AddTimeGamePlay();
+                coin -= pricePlayOn;
+                PlayerPrefs.SetInt("Coin", coin);
+                this.gameObject.SetActive(false);   
+            }
+            
+            
             
         }
         

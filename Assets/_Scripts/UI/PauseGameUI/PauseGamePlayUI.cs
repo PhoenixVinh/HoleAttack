@@ -1,5 +1,6 @@
 using System;
 using _Scripts.ManagerScene;
+using _Scripts.ManagerScene.HomeScene;
 using _Scripts.UI.PauseGameUI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -25,9 +26,9 @@ public class PauseGamePlayUI: PauseGame
     {
         //this.OnDisable();
          SceneManager.LoadScene(EnumScene.HomeScene.ToString());
-        
-        // Show popup minus health 
-        
+         ManagerHomeScene.Instance.ShowLoseGameUI();
+         // Show popup minus health 
+
     }
     
     

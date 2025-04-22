@@ -12,17 +12,18 @@ public class ManagerLevelGamePlay : MonoBehaviour
     public static ManagerLevelGamePlay Instance;
 
     public LevelGamePlaySO level;
-    
-    [SerializeField] LevelManager levelManager;
+    public int currentLevel = 1;
+
     private void Awake()
     {
         if(Instance == null) Instance = this;
         else if (Instance != this) Destroy(gameObject);
   
+        
+        currentLevel = PlayerPrefs.GetInt("Level", 1);
         LoadLevelSO();
-       
     }
-    public int currentLevel = 1;
+   
 
 
     private void Start()
@@ -50,15 +51,16 @@ public class ManagerLevelGamePlay : MonoBehaviour
 
     public async void SpawnLevel()
     {
-        HoleController.Instance.SetPosition(Vector3.zero);
-        levelManager.ResetLevel();
-        await Task.Delay(1000);
+        MissionPooling.Instance.DisactiveAllItem();
         
+        
+        HoleController.Instance.Reset();
+        HoleController.Instance.SetPosition(Vector3.zero);
         SpawnItemMap.Instance.SetData(level.levelSpawnData);
         ManagerMission.Instance.SetData(level.missionData);
         ColdownTime.Instance.SetData(level.timeToComplete);
      
-        MissionPooling.Instance.DisactiveAllItem();
+        
         
     }
 

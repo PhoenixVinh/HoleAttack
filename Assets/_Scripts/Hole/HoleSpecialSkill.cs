@@ -124,18 +124,34 @@ namespace _Scripts.Hole
         private IEnumerator IncreaseRangeCoroutine()
         {
             IsProcessSkill[0] = true;
-            float scaleIncrease = transform.localScale.x *1.5f;
+            float scaleIncrease = HoleController.Instance.GetCurrentRadius() *1.5f;
             var sequence = DOTween.Sequence();
             sequence.Append(transform.DOScale(new Vector3(scaleIncrease, transform.localScale.y, scaleIncrease), 1f));
             sequence.OnUpdate(
                 () => { HoleController.Instance.OnUpLevelHole(); }
             );
             DOTween.Kill(sequence);
-            yield return new WaitForSeconds(timeSkill01);
+            float _timeSkill01 = timeSkill01;
+            while (_timeSkill01 > 0)
+            {
+                _timeSkill01 -= Time.deltaTime;
+                if (scaleIncrease < HoleController.Instance.GetCurrentRadius() * 1.5f)
+                {
+                    scaleIncrease = HoleController.Instance.GetCurrentRadius() * 1.5f;
+                    var sequence2= DOTween.Sequence();
+                    sequence2.Append(transform.DOScale(new Vector3(scaleIncrease, transform.localScale.y, scaleIncrease), 1f));
+                    sequence2.OnUpdate(
+                        () => { HoleController.Instance.OnUpLevelHole(); }
+                    );
+                    DOTween.Kill(sequence2);
+                }
+                yield return null;
+            }
+            // yield return new WaitForSeconds(timeSkill01);
             
-            DOTween.Kill(sequence);
+         
             // Decease Scale 
-            float scaleDecrease = transform.localScale.x /1.5f;
+            float scaleDecrease = HoleController.Instance.GetCurrentRadius();
             
             sequence = DOTween.Sequence();
             sequence.Append(transform.DOScale(new Vector3(scaleDecrease, transform.localScale.y, scaleDecrease), 1f));

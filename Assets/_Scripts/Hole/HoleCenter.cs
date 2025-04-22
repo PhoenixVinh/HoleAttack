@@ -24,46 +24,20 @@ public class HoleCenter : MonoBehaviour
         {
             var rb = other.transform.parent.GetComponent<Rigidbody>();
             rb.isKinematic = false;
-            rb.AddForce(new Vector3(0,3f,0));
+            other.transform.parent.Translate(new Vector3(0,0.1f,0));
             other.transform.parent.gameObject.layer = LayerMask.NameToLayer(LayerMaskVariable.NoCollision.ToString());
             other.gameObject.layer = LayerMask.NameToLayer(LayerMaskVariable.NoCollision.ToString());
             
         }
     }
-
-    private IEnumerator MoveCenterCoroutine(Item item)
-    {
-        item.InTheHole = true;
-        float timeMove = _timeSuction;
-        while (timeMove > 0)
-        {
-            if (item == null) break;
-            Vector3 direction = this.transform.position - item.transform.position;
-            direction.Normalize();
-            direction.y = -1;
-           
-            item.transform.Translate(direction*Time.deltaTime*_backHoleGravity);
-            timeMove -= Time.deltaTime;
-            yield return null;
-        }
-
-
-
-        if (item.InTheHole)
-        {
-            item.gameObject.layer = LayerMask.NameToLayer(LayerMaskVariable.NoCollision.ToString());
-        }
- 
-        
-        
-    }
+    
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Item"))
         {
             other.gameObject.layer = LayerMask.NameToLayer(LayerMaskVariable.Collision.ToString());
- 
+            other.transform.parent.gameObject.layer = LayerMask.NameToLayer(LayerMaskVariable.Collision.ToString());
         }
     }
 }

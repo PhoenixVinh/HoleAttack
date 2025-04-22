@@ -38,6 +38,7 @@ public class HoleController : MonoBehaviour
 
 
     private HoleSpecialSkill _holeSpecialSkill;
+    [SerializeField] private LevelManager _levelManager;
     
     private void Awake()
     {
@@ -96,6 +97,13 @@ public class HoleController : MonoBehaviour
     {
         return this.transform.localScale.x; 
     }
+
+    public float GetCurrentRadius()
+    {
+        return _levelManager.GetScalelevel();
+    }
+
+    
     // private  IncreaseRangeCoroutine()
     // {
     //     float timeIncrease = 20f; 
@@ -104,6 +112,12 @@ public class HoleController : MonoBehaviour
     {
         this.transform.position = position;
         this._holeSpecialSkill.StopEventSkill();
+        //this._levelManager.ResetLevel();
         
+    }
+
+    public void Reset()
+    {
+        this._levelManager.ResetLevel();
     }
 }

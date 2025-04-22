@@ -6,7 +6,6 @@ public class ManagerWinLoss : MonoBehaviour
     public GameObject WinUI;
     public GameObject LoseUI;
 
-
     public void OnEnable()
     {
         WinLossEvent.OnWin += ShowUIWin;
@@ -25,12 +24,18 @@ public class ManagerWinLoss : MonoBehaviour
     {
         
         WinUI.SetActive(true);
+        int currentLevel = PlayerPrefs.GetInt("Level");
+        PlayerPrefs.SetInt("Level", currentLevel + 1);
+       
     }
     private void ShowUILoss()
     {
         if (WinUI.activeSelf) return;
+        
         LoseUI.SetActive(true);
     }
+
+   
 
         
 }

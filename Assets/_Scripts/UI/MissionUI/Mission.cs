@@ -58,6 +58,7 @@ namespace _Scripts.UI.MissionUI
                 .SetId(IdDotween)
                 .Append(EffectMission.transform.DOMove(this.transform.position + new Vector3(0, 0.5f, 0), 1.5f))
                 .Join(EffectMission.transform.DOScale(new Vector3(0.7f, 0.7f, 0.7f), 1.5f))
+                .SetUpdate(true)
                 .OnComplete(delegate
                 {
                     EffectMission.SetActive(false);
