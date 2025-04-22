@@ -12,6 +12,13 @@ namespace _Scripts.ObjectPooling
             
             return obj;
         }
-                                    
+
+        public void DisactiveAllItem()
+        {
+            foreach (var poolObject in poolObjects)
+            {
+                poolObject.gameObject.SetActive(false);
+            }
+        }
     }
 }

@@ -22,7 +22,9 @@ public class HoleCenter : MonoBehaviour
     {
         if (other.CompareTag("Item"))
         {
-            other.transform.parent.GetComponent<Rigidbody>().isKinematic = false;
+            var rb = other.transform.parent.GetComponent<Rigidbody>();
+            rb.isKinematic = false;
+            rb.AddForce(new Vector3(0,3f,0));
             other.transform.parent.gameObject.layer = LayerMask.NameToLayer(LayerMaskVariable.NoCollision.ToString());
             other.gameObject.layer = LayerMask.NameToLayer(LayerMaskVariable.NoCollision.ToString());
             

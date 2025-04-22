@@ -75,6 +75,7 @@ public class ColdownTime : MonoBehaviour, IPrecent
         else
         {
             // Process when playe lose
+            WinLossEvent.OnLoss?.Invoke();
         }
         
     }

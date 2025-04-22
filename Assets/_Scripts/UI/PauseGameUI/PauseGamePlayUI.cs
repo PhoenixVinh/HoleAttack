@@ -23,10 +23,14 @@ public class PauseGamePlayUI: PauseGame
 
     private void QuitGame()
     {
-        SceneManager.LoadScene(EnumScene.HomeScene.ToString());
+        //this.OnDisable();
+         SceneManager.LoadScene(EnumScene.HomeScene.ToString());
+        
         // Show popup minus health 
         
     }
+    
+    
 
     private void CloseUI()
     {

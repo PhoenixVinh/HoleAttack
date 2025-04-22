@@ -21,15 +21,34 @@ namespace _Scripts.UI.MissionUI
 
         private void Awake()
         {
-            Instance = this;
-            //Genetate Data for Mission 
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(this.gameObject);
+                //Instance = this; 
+                return;
+            }
+           
             
+            //Genetate Data for Mission 
+         
 
 
         }
 
         private void CreateMissions()
         {
+
+
+
+            while (transform.childCount > 0)
+            {
+                DestroyImmediate(transform.GetChild(0).gameObject);
+            }
+            TypeItems.Clear();
             foreach (var missionSo in MissionsSO.misstionsData)
             {
                 GameObject mission = Instantiate(Mission, transform);
@@ -47,6 +66,11 @@ namespace _Scripts.UI.MissionUI
             if (TypeItems[itemType].IsDone())
             {
                 TypeItems.Remove(itemType);
+            }
+
+            if (TypeItems.Count == 0)
+            {
+                WinLossEvent.OnWin?.Invoke();
             }
         }
 

@@ -145,6 +145,22 @@ namespace _Scripts.Hole
             IsProcessSkill[0] = false;
         }
 
+        public void StopEventSkill()
+        {
+            for (int i = 0; i < IsProcessSkill.Length; i++)
+            {
+                IsProcessSkill[i] = false;
+            }
+            StopAllCoroutines();
+            
+            // magnet Skill stop 
+            TriggerMagnet.SetActive(false);
+            EffectSkill02.Stop();
+            // use Scale 
+            
+
+
+        }
 
         private void OnDrawGizmosSelected()
         {
@@ -153,5 +169,8 @@ namespace _Scripts.Hole
             Gizmos.DrawWireSphere(positionCenterOverLap, transform.localScale.x );
             
         }
+
+
+        
     }
 }

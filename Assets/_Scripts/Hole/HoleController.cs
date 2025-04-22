@@ -100,4 +100,10 @@ public class HoleController : MonoBehaviour
     // {
     //     float timeIncrease = 20f; 
     // }
+    public void SetPosition(Vector3 position)
+    {
+        this.transform.position = position;
+        this._holeSpecialSkill.StopEventSkill();
+        
+    }
 }

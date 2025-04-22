@@ -9,6 +9,7 @@ namespace _Scripts.UI.PauseGameUI
         
         
         
+        
         public virtual void OnEnable()
         {
             pauseButton.gameObject.SetActive(false);
@@ -18,7 +19,11 @@ namespace _Scripts.UI.PauseGameUI
 
         public virtual void OnDisable()
         {
-            pauseButton.gameObject.SetActive(true);
+            if (pauseButton != null)
+            {
+                pauseButton.gameObject.SetActive(true);
+            }
+         
             Time.timeScale = 1;
         }
     }

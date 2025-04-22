@@ -19,11 +19,10 @@ namespace _Scripts.UI.MissionUI
 
 
         public bool IsDone() => amountItem == 0;
-        
-        
-        
         public int GetAmountItem() => amountItem;
 
+        
+        private string IdDotween = "MissionDT";
 
         public void SetData(MissionData missionData)
         {
@@ -35,10 +34,10 @@ namespace _Scripts.UI.MissionUI
         public Sprite GetImage() => image.sprite;
         public void MinusItem(Vector3 positionMinus)
         {
-            StartCoroutine(AddItemCoroutine(positionMinus));
+            AddItem(positionMinus);
         }
 
-        private IEnumerator AddItemCoroutine(Vector3 positionMinus)
+        private void AddItem(Vector3 positionMinus)
         {
             amountItem--;
             amountItem = amountItem >= 0 ? amountItem : 0;
@@ -54,20 +53,24 @@ namespace _Scripts.UI.MissionUI
             
             // Using Dotween To move Object
             
-            var sequence = DOTween.Sequence();
             EffectMission.transform.localScale = new Vector3(1, 1, 1) * 1.2f;
-            sequence.Join(EffectMission.transform.DOMove(this.transform.position + new Vector3(0, 0.5f, 0), 1.5f));
-            sequence.Join(EffectMission.transform.DOScale(new Vector3(0.7f, 0.7f, 0.7f), 1.5f));
-            sequence.OnComplete(delegate
-            {
-                EffectMission.SetActive(false);
-                this._text.text = this.amountItem.ToString();
-            });
-         
+            DOTween.Sequence()
+                .SetId(IdDotween)
+                .Append(EffectMission.transform.DOMove(this.transform.position + new Vector3(0, 0.5f, 0), 1.5f))
+                .Join(EffectMission.transform.DOScale(new Vector3(0.7f, 0.7f, 0.7f), 1.5f))
+                .OnComplete(delegate
+                {
+                    EffectMission.SetActive(false);
+                    this._text.text = this.amountItem.ToString();
+                });
+        }
 
-            yield return new WaitForSeconds(0.1f);
-            // Add Pooling to create Image for it 
-
+        private void OnDestroy()
+        {
+            //if(_sequence != null)
+                //DOTween.Kill(_sequence);
+            DOTween.Kill(IdDotween);
+            
         }
     }
 }

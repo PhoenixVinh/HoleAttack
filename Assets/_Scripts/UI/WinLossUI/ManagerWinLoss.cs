@@ -23,10 +23,12 @@ public class ManagerWinLoss : MonoBehaviour
     
     private void ShowUIWin()
     {
+        
         WinUI.SetActive(true);
     }
     private void ShowUILoss()
     {
+        if (WinUI.activeSelf) return;
         LoseUI.SetActive(true);
     }
 

@@ -50,7 +50,16 @@ public class LevelManager : MonoBehaviour
         }
        
         HoleController.Instance.LoadLevel(expUpLevel, dataLevel.radious);
+        
     }
+
+    public void ResetLevel()
+    {
+        currentLevel = 0;
+        UpdateLevel();
+    }
+    
+    
     
     
     
