@@ -32,10 +32,15 @@ namespace _Scripts.Hole
 
         [Header("Variable Skill Freeze Time")]
         public float timeSkill04 = 12f;
-       
+
+        private void Awake()
+        {
+            EffectSkill02.gameObject.SetActive(false);
+        }
+
         private void Start()
         {
-            EffectSkill02.Stop(); 
+          
             TriggerMagnet.SetActive(false);
             for (int i = 0; i < IsProcessSkill.Length; i++)
             {
@@ -108,8 +113,8 @@ namespace _Scripts.Hole
             IsProcessSkill[1] = true;
             float timeColdown = timeSkill02;
             
-            EffectSkill02.Play();
             TriggerMagnet.SetActive(true);
+            EffectSkill02.gameObject.SetActive(true);
             while (timeColdown > 0)
             {
                 EffectSkill02.startSpeed = HoleController.Instance.GetCurrentScale() * 1.5f;
@@ -117,7 +122,8 @@ namespace _Scripts.Hole
                 yield return null;
             }
             TriggerMagnet.SetActive(false);
-            EffectSkill02.Stop();
+            EffectSkill02.gameObject.SetActive(false);
+         
             IsProcessSkill[1] = false;
         }
 
@@ -131,6 +137,7 @@ namespace _Scripts.Hole
                 () => { HoleController.Instance.OnUpLevelHole(); }
             );
             DOTween.Kill(sequence);
+            //this.transform.localScale = new Vector3(scaleIncrease, transform.localScale.y, scaleIncrease);
             float _timeSkill01 = timeSkill01;
             while (_timeSkill01 > 0)
             {
@@ -163,28 +170,27 @@ namespace _Scripts.Hole
 
         public void StopEventSkill()
         {
+            StopAllCoroutines();
+            if (IsProcessSkill[1])
+            {
+                // magnet Skill stop 
+                TriggerMagnet.SetActive(false);
+                EffectSkill02.gameObject.SetActive(false);
+            }
+            
             for (int i = 0; i < IsProcessSkill.Length; i++)
             {
                 IsProcessSkill[i] = false;
             }
-            StopAllCoroutines();
             
-            // magnet Skill stop 
-            TriggerMagnet.SetActive(false);
-            EffectSkill02.Stop();
+            
+         
             // use Scale 
             
 
 
         }
 
-        private void OnDrawGizmosSelected()
-        {
-            Gizmos.color = Color.red;
-            Vector3 positionCenterOverLap = new Vector3(transform.position.x, 0, transform.position.z);
-            Gizmos.DrawWireSphere(positionCenterOverLap, transform.localScale.x );
-            
-        }
 
 
         

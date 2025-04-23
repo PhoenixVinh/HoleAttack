@@ -17,13 +17,19 @@ public class ZoomOutBtn : MonoBehaviour
     {
         var targetLocalScale = transform.localScale;
         transform.localScale = Vector3.zero;
-        var sequence = DOTween.Sequence();
-        sequence.Append(transform.DOScale(targetLocalScale * 1.1f, time));
-        sequence.Append(transform.DOScale(targetLocalScale, 0.1f));
-        sequence.SetUpdate(true);
-        sequence.Play();
-       
+        DOTween.Sequence()
+            .SetId("AnimationZoomOutButton")
+            .Append(transform.DOScale(targetLocalScale * 1.1f, time))
+            .Append(transform.DOScale(targetLocalScale, 0.1f))
+            .SetUpdate(true);
 
+
+
+    }
+
+    private void OnDestroy()
+    {
+        DOTween.Kill("AnimationZoomOutButton");
     }
 
    

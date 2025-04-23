@@ -1,3 +1,6 @@
+using _Scripts.Event;
+using _Scripts.UI;
+using _Scripts.UI.HomeSceneUI.ResourcesUI;
 using UnityEngine;
 
 namespace _Scripts.HACK
@@ -6,12 +9,9 @@ namespace _Scripts.HACK
     {
         public void ResetLevelGamePlay()
         {
+            Resource.Instance.AddMaxHealth();
             PlayerPrefs.SetInt("Level", 1);
-            int heart = PlayerPrefs.GetInt ("Heart");
-            Debug.Log(heart);
-            heart = 5;
-            PlayerPrefs.SetInt ("Heart", heart);
-            
+            PlayerPrefs.Save();
         }
     }
 }

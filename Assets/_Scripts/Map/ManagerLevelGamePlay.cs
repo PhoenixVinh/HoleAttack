@@ -1,11 +1,11 @@
 
+using System.Threading.Tasks;
 using _Scripts.Data.LevelGamePlayData;
 using _Scripts.Map.MapSpawnItem;
 using _Scripts.ObjectPooling;
 using _Scripts.UI.MissionUI;
-using UnityEditor.VersionControl;
 using UnityEngine;
-using Task = System.Threading.Tasks.Task;
+
 
 public class ManagerLevelGamePlay : MonoBehaviour
 {
@@ -52,13 +52,14 @@ public class ManagerLevelGamePlay : MonoBehaviour
     public async void SpawnLevel()
     {
         MissionPooling.Instance.DisactiveAllItem();
-        
-        
         HoleController.Instance.Reset();
         HoleController.Instance.SetPosition(Vector3.zero);
+        HoleController.Instance.gameObject.SetActive(false);
+        await Task.Delay(500);
         SpawnItemMap.Instance.SetData(level.levelSpawnData);
         ManagerMission.Instance.SetData(level.missionData);
         ColdownTime.Instance.SetData(level.timeToComplete);
+        HoleController.Instance.gameObject.SetActive(true);
      
         
         

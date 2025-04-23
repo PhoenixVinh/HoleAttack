@@ -17,7 +17,7 @@ public class ChangeSceneBtn : MonoBehaviour
         button.onClick.AddListener(ChangeScene);
     }
 
-    private void ChangeScene()
+    public virtual void ChangeScene()
     {
         SceneManager.LoadScene(namescene.ToString());
     }

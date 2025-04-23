@@ -22,12 +22,14 @@ namespace _Scripts.UI.WinLossUI
             coin += 75;
             PlayerPrefs.SetInt("Coin", coin);
             continueButton.onClick.AddListener(ShowNextlevel);
+            this.pauseButton.gameObject.SetActive(true);
         }
 
         public override void OnDisable()
         {
             base.OnDisable();
             continueButton.onClick.RemoveAllListeners();
+            this.pauseButton.gameObject.SetActive(true);
         }
 
         private void ShowNextlevel()

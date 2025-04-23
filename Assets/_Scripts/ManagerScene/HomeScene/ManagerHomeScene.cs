@@ -1,6 +1,8 @@
 using System;
 using System.Threading.Tasks;
 using _Scripts.Event;
+using _Scripts.UI;
+using _Scripts.UI.HomeSceneUI.ResourcesUI;
 using UnityEngine;
 
 namespace _Scripts.ManagerScene.HomeScene
@@ -29,10 +31,8 @@ namespace _Scripts.ManagerScene.HomeScene
             ShowLoseGame.SetActive(true);
             await Task.Delay(3000);
             ShowLoseGame.SetActive(false);
-            int heart = PlayerPrefs.GetInt ("Heart");
-            heart -= 1;
-            PlayerPrefs.SetInt ("Heart", heart);
-            ResourceEvent.OnUpdateResource?.Invoke();
+            Resource.Instance.MinusHealth();
+            
         }
         
         

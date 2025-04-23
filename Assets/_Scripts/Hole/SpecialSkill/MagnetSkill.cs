@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using DG.Tweening;
 using DG.Tweening.Core;
 using Unity.VisualScripting;
@@ -43,7 +44,7 @@ public class MagnetSkill : MonoBehaviour
 
     private void OnEnable()
     {
-        _collider.radius = 0.5f + 1.25f/10f;
+        _collider.radius = 0.5f + addingRadius/10f;
     }
     private void Start()
     {
@@ -57,6 +58,9 @@ public class MagnetSkill : MonoBehaviour
             _suckecObjects.Add(other.gameObject, new suckecObjectParameter(other.gameObject.transform.localScale, false) );
         }
     }
+    
+    
+    
 
 
     private void FixedUpdate()
@@ -108,22 +112,31 @@ public class MagnetSkill : MonoBehaviour
             // }
             //
             obj.transform.position += directionMovement * suctionforce * Time.deltaTime;
-            
             // Scale object to the Hole 
             // Check if it is scaled => Don't Scale again 
-            
-            
             // Scale Object
             Vector3 minSacle = new Vector3(0, 0, 0);
             if (obj.transform.localScale.x > minSacle.x)
             {
                 obj.transform.localScale *= 0.95f;
             }
-            
-            
         }
+        
+    }
 
-        
-        
+    public async void OnDisable()
+    {
+        foreach (var item in _suckecObjects)
+        {
+            if(item.Key == null) continue;
+            else
+            {
+                while (item.Key.transform.localScale.x < item.Value.originScale.x)
+                {
+                    item.Key.transform.localScale /= 0.95f;
+                    Task.Delay(100);
+                }
+            }
+        }
     }
 }

@@ -35,6 +35,7 @@ namespace _Scripts.UI.WinLossUI
         {
             AddTimeGamePlay();
             this.gameObject.SetActive(false);   
+            
         }
 
         private void OnClickPlayOnBtn()

@@ -904,7 +904,7 @@ GameObject:
   - component: {fileID: 483803498}
   - component: {fileID: 483803497}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: txtAmount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2565,11 +2565,11 @@ RectTransform:
   m_Father: {fileID: 1271906363}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 372, y: 742}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -33, y: 621}
   m_SizeDelta: {x: 200, y: 200}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1254962492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2859,6 +2859,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1403092064}
+  - component: {fileID: 1403092065}
   m_Layer: 5
   m_Name: Health
   m_TagString: Untagged
@@ -2890,6 +2891,22 @@ RectTransform:
   m_AnchoredPosition: {x: 154, y: -92}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1403092065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403092063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33691444fa0c4fe09c1bc0f7e57b3399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyText: {fileID: 483803497}
+  timeText: {fileID: 1948749591}
+  restoreDuration: 200
+  maxEnergy: 5
 --- !u!1 &1614810208
 GameObject:
   m_ObjectHideFlags: 0
@@ -3580,6 +3597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coin: {fileID: 633742179}
   heart: {fileID: 483803497}
+  Energy: {fileID: 1403092065}
 --- !u!1 &1948749589
 GameObject:
   m_ObjectHideFlags: 0
@@ -3592,7 +3610,7 @@ GameObject:
   - component: {fileID: 1948749592}
   - component: {fileID: 1948749591}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: txtTime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
