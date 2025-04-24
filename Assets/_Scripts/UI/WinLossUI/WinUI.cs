@@ -18,9 +18,9 @@ namespace _Scripts.UI.WinLossUI
         {
             base.OnEnable();
             coinText.text = "75";
-            int coin = PlayerPrefs.GetInt("Coin");
+            int coin = PlayerPrefs.GetInt(StringPlayerPrefs.CURRENT_COIN);
             coin += 75;
-            PlayerPrefs.SetInt("Coin", coin);
+            PlayerPrefs.SetInt(StringPlayerPrefs.CURRENT_COIN, coin);
             continueButton.onClick.AddListener(ShowNextlevel);
             this.pauseButton.gameObject.SetActive(true);
         }

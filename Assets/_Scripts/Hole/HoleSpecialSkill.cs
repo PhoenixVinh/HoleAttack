@@ -192,7 +192,9 @@ namespace _Scripts.Hole
         }
 
 
-
-        
+        public bool UsingSkill(int index)
+        {
+            return IsProcessSkill[index];
+        }
     }
 }

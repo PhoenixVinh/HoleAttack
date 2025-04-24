@@ -38,7 +38,7 @@ namespace _Scripts.UI.HomeSceneUI.ResourcesUI
         }
         private void UpdateText()
         {
-            amountCoin = PlayerPrefs.GetInt("Coin", 9000); 
+            amountCoin = PlayerPrefs.GetInt(StringPlayerPrefs.CURRENT_COIN, 9000); 
             coin.text = amountCoin.ToString();
             
         }
@@ -53,6 +53,12 @@ namespace _Scripts.UI.HomeSceneUI.ResourcesUI
             this.Energy.AddMaxEnergy();
             
         }
-        
+
+        public void AddMaxCoin()
+        {
+            PlayerPrefs.SetInt(StringPlayerPrefs.CURRENT_COIN, 7500);
+            amountCoin = PlayerPrefs.GetInt(StringPlayerPrefs.CURRENT_COIN, 9000); 
+            coin.text = amountCoin.ToString();
+        }
     }
 }

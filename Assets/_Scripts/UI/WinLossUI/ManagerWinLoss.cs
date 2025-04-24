@@ -1,4 +1,5 @@
 using _Scripts.Event;
+using _Scripts.UI;
 using UnityEngine;
 
 public class ManagerWinLoss : MonoBehaviour
@@ -24,8 +25,8 @@ public class ManagerWinLoss : MonoBehaviour
     {
         
         WinUI.SetActive(true);
-        int currentLevel = PlayerPrefs.GetInt("Level");
-        PlayerPrefs.SetInt("Level", currentLevel + 1);
+        int currentLevel = PlayerPrefs.GetInt(StringPlayerPrefs.CURRENT_LEVEL);
+        PlayerPrefs.SetInt(StringPlayerPrefs.CURRENT_LEVEL, currentLevel + 1);
        
     }
     private void ShowUILoss()

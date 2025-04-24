@@ -24,7 +24,7 @@ public class PauseGamePlayUI: PauseGame
 
     private void QuitGame()
     {
-        //this.OnDisable();
+         this.OnDisable();
          SceneManager.LoadScene(EnumScene.HomeScene.ToString());
          ManagerHomeScene.Instance.ShowLoseGameUI();
          // Show popup minus health 

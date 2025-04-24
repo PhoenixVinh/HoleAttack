@@ -43,12 +43,12 @@ namespace _Scripts.UI.WinLossUI
             // Check if have enough gold then minus it and Add Time to the Game play 
             
            
-            int coin = PlayerPrefs.GetInt("Coin");
+            int coin = PlayerPrefs.GetInt(StringPlayerPrefs.CURRENT_COIN);
             if (coin >= pricePlayOn)
             {
                 AddTimeGamePlay();
                 coin -= pricePlayOn;
-                PlayerPrefs.SetInt("Coin", coin);
+                PlayerPrefs.SetInt(StringPlayerPrefs.CURRENT_COIN, coin);
                 this.gameObject.SetActive(false);   
             }
             

@@ -10,7 +10,9 @@ namespace _Scripts.HACK
         public void ResetLevelGamePlay()
         {
             Resource.Instance.AddMaxHealth();
-            PlayerPrefs.SetInt("Level", 1);
+            Resource.Instance.AddMaxCoin();
+            PlayerPrefs.SetInt(StringPlayerPrefs.CURRENT_LEVEL, 1);
+          
             PlayerPrefs.Save();
         }
     }

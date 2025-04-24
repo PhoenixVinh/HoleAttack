@@ -1,8 +1,10 @@
 
 using System.Threading.Tasks;
+using _Scripts.Booster;
 using _Scripts.Data.LevelGamePlayData;
 using _Scripts.Map.MapSpawnItem;
 using _Scripts.ObjectPooling;
+using _Scripts.UI;
 using _Scripts.UI.MissionUI;
 using UnityEngine;
 
@@ -20,7 +22,7 @@ public class ManagerLevelGamePlay : MonoBehaviour
         else if (Instance != this) Destroy(gameObject);
   
         
-        currentLevel = PlayerPrefs.GetInt("Level", 1);
+        currentLevel = PlayerPrefs.GetInt(StringPlayerPrefs.CURRENT_LEVEL, 1);
         LoadLevelSO();
     }
    
@@ -60,9 +62,10 @@ public class ManagerLevelGamePlay : MonoBehaviour
         ManagerMission.Instance.SetData(level.missionData);
         ColdownTime.Instance.SetData(level.timeToComplete);
         HoleController.Instance.gameObject.SetActive(true);
-     
-        
-        
+        ManagerBooster.Instance.SetData();
+
+
+
     }
 
 

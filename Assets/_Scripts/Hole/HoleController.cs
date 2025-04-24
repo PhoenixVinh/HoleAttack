@@ -120,4 +120,9 @@ public class HoleController : MonoBehaviour
     {
         this._levelManager.ResetLevel();
     }
+
+    public bool IsProcessSkill(int index)
+    {
+        return this._holeSpecialSkill.UsingSkill(index);
+    }
 }

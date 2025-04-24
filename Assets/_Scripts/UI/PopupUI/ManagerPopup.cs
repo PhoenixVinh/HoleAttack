@@ -1,0 +1,28 @@
+using System;
+using UnityEngine;
+
+namespace _Scripts.UI.PopupUI
+{
+    public class ManagerPopup: MonoBehaviour
+    {
+        public static ManagerPopup Instance;
+        public PopupItemInGame popupBuyItemInGame; 
+        private void Awake()
+        {
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        public void ShowPopupBuyItemInGame(int index)
+        {
+            popupBuyItemInGame.SetData(index);
+            popupBuyItemInGame.gameObject.SetActive(true);
+        }
+    }
+}
