@@ -9,7 +9,7 @@ namespace _Scripts.Hole
 {
     public class HoleBottom : MonoBehaviour
     {
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerStay(Collider other)
         {
             // Check if it is the item Destroy it 
             if (other.CompareTag("Item"))

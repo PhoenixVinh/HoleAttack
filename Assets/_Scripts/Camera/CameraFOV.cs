@@ -44,7 +44,7 @@ namespace _Scripts.Camera
         }
 
 
-        private void FixedUpdate()
+        private void LateUpdate()
         {
 
             float addingFOV = HoleController.Instance.transform.localScale.x * 10f;

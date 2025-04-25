@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Black Bottle
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 10755, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _MK_ARTISTIC_ANIMATION_STUTTER
@@ -252,7 +252,7 @@ Material:
     m_Colors:
     - _AlbedoColor: {r: 0.18934675, g: 0.2649988, b: 0.3490566, a: 1}
     - _BaseColor: {r: 0.30188674, g: 0.09940172, b: 0, a: 1}
-    - _Color: {r: 0.1893467, g: 0.26499876, b: 0.34905657, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GoochBrightColor: {r: 1, g: 1, b: 1, a: 1}

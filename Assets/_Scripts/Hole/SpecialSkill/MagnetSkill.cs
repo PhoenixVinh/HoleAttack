@@ -115,7 +115,7 @@ public class MagnetSkill : MonoBehaviour
             // Scale object to the Hole 
             // Check if it is scaled => Don't Scale again 
             // Scale Object
-            Vector3 minSacle = new Vector3(0, 0, 0);
+            Vector3 minSacle = item.Value.originScale/2f;
             if (obj.transform.localScale.x > minSacle.x)
             {
                 obj.transform.localScale *= 0.95f;
@@ -131,10 +131,11 @@ public class MagnetSkill : MonoBehaviour
             if(item.Key == null) continue;
             else
             {
-                while (item.Key.transform.localScale.x < item.Value.originScale.x)
+                
+                while ( item.Key != null && item.Key.transform.localScale.x < item.Value.originScale.x) 
                 {
                     item.Key.transform.localScale /= 0.95f;
-                    Task.Delay(100);
+                    await Task.Delay(50);
                 }
             }
         }

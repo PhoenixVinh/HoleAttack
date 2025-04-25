@@ -15,7 +15,7 @@ public class CameraFollow : MonoBehaviour
 
 
 
-    public void LateUpdate()
+    public void Update()
     {
         FollowTheTarget();
     }

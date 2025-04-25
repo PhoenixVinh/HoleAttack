@@ -12,8 +12,8 @@ namespace _Scripts.Hole
         private bool canMove = true;
 
         public Collider areaCanMove;
-  
-        
+
+        public Vector2 GetDirectionMovement() => _movementDirection;
         
         public void Move(Vector2 movementDirection)
         {
@@ -57,7 +57,7 @@ namespace _Scripts.Hole
             Vector3 newCircleCenter = new Vector3(transform.position.x, 0, transform.position.z) +directionNormalized*_speedMovement*Time.deltaTime;
 
             int numberOfPoints = 8;
-            float radius = HoleController.Instance.GetCurrentRadius()/1.5f;
+            float radius = HoleController.Instance.GetCurrentRadius()/2f;
             
             List<Vector3> checkpoints  = new List<Vector3>();
             // Tính toán các điểm
