@@ -103,7 +103,10 @@ public class HoleController : MonoBehaviour
         return _levelManager.GetScalelevel();
     }
 
-    
+    public int GetCurrentLevel()
+    {
+        return _levelManager.currentLevel;
+    }
     // private  IncreaseRangeCoroutine()
     // {
     //     float timeIncrease = 20f; 

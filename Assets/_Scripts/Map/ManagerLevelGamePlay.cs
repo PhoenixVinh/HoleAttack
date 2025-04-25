@@ -4,6 +4,7 @@ using _Scripts.Booster;
 using _Scripts.Data.LevelGamePlayData;
 using _Scripts.Map.MapSpawnItem;
 using _Scripts.ObjectPooling;
+using _Scripts.Tutorial;
 using _Scripts.UI;
 using _Scripts.UI.MissionUI;
 using UnityEngine;
@@ -30,7 +31,11 @@ public class ManagerLevelGamePlay : MonoBehaviour
 
     private void Start()
     {
+       
+        ManagerTutorial.Instance.ShowTutorials(currentLevel);
         SpawnLevel();
+       
+       
     }
 
     public void ChangeLevel(int level)
@@ -51,20 +56,21 @@ public class ManagerLevelGamePlay : MonoBehaviour
         return true;
     }
 
-    public async void SpawnLevel()
+    public Task<bool>  SpawnLevel()
     {
         MissionPooling.Instance.DisactiveAllItem();
         HoleController.Instance.Reset();
         HoleController.Instance.SetPosition(Vector3.zero);
         HoleController.Instance.gameObject.SetActive(false);
-        await Task.Delay(500);
+        Task.Delay(500);
         SpawnItemMap.Instance.SetData(level.levelSpawnData);
         ManagerMission.Instance.SetData(level.missionData);
         ColdownTime.Instance.SetData(level.timeToComplete);
+        Task.Delay(100);
         HoleController.Instance.gameObject.SetActive(true);
         ManagerBooster.Instance.SetData();
 
-
+        return Task.FromResult(true);
 
     }
 
@@ -74,7 +80,9 @@ public class ManagerLevelGamePlay : MonoBehaviour
         currentLevel  = currentLevel + 1;
         if (LoadLevelSO())
         {
+            ManagerTutorial.Instance.ShowTutorials(currentLevel);
             SpawnLevel();
+            
         }
         else
         {

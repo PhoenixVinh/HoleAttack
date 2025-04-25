@@ -11,7 +11,7 @@ namespace _Scripts.Hole
         private float _speedMovement;
         private bool canMove = true;
 
-        public Collider areaCanMove;
+        [SerializeField]private Collider areaCanMove;
 
         public Vector2 GetDirectionMovement() => _movementDirection;
         
@@ -93,6 +93,11 @@ namespace _Scripts.Hole
         public void SetSpeedMovement(float speedMovement)
         {
             this._speedMovement = speedMovement;
+        }
+
+        public void SetColliderArea(Collider collider)
+        {
+            this.areaCanMove = collider;
         }
 
         public void OnDrawGizmosSelected()

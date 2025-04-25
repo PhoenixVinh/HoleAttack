@@ -6,7 +6,8 @@ namespace _Scripts.UI.PopupUI
     public class ManagerPopup: MonoBehaviour
     {
         public static ManagerPopup Instance;
-        public PopupItemInGame popupBuyItemInGame; 
+        public PopupItemInGame popupBuyItemInGame;
+        public PopupFreeItem popupFreeItem;
         private void Awake()
         {
             if (Instance == null)
@@ -23,6 +24,13 @@ namespace _Scripts.UI.PopupUI
         {
             popupBuyItemInGame.SetData(index);
             popupBuyItemInGame.gameObject.SetActive(true);
+            
+        }
+
+        public void ShowPopupFreeItem(int index)
+        {
+            popupFreeItem.SetData(index);
+            popupFreeItem.gameObject.SetActive(true);
         }
     }
 }

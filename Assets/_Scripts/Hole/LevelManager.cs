@@ -1,3 +1,4 @@
+using _Scripts.UI;
 using HoleLevelData;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public class LevelManager : MonoBehaviour
     public void Start()
     {
         UpdateLevel();
+        currentLevel = PlayerPrefs.GetInt(StringPlayerPrefs.CURRENT_LEVEL, 1);
     }
 
     private void OnEnable()

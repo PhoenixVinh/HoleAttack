@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using _Scripts.Event;
 using _Scripts.UI;
 using _Scripts.UI.HomeSceneUI.ResourcesUI;
+using _Scripts.UI.PopupUI;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace _Scripts.ManagerScene.HomeScene
@@ -21,9 +23,22 @@ namespace _Scripts.ManagerScene.HomeScene
             } else {
                 Destroy (gameObject);
             }
-            ShowLoseGame.SetActive(false);
+            //ShowLoseGame.SetActive(false);
         }
 
+        private void Start()
+        {
+            int CurrentLevel = PlayerPrefs.GetInt(StringPlayerPrefs.CURRENT_LEVEL, 1);
+            if (CurrentLevel == 3)
+            {
+                int showTutorialLv3 = PlayerPrefs.GetInt(StringPlayerPrefs.TUTORIAL_LEVEL_3, 0);
+                if (showTutorialLv3 == 0)
+                {
+                    // Show Pop Up Free Item  
+                    ManagerPopup.Instance.ShowPopupFreeItem(0);
+                }
+            }
+        }
 
 
         public async void ShowLoseGameUI()
