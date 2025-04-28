@@ -1,3 +1,4 @@
+using _Scripts.Sound;
 using UnityEngine;
 
 namespace _Scripts.UI.HomeSceneUI.ButtonUI
@@ -6,10 +7,12 @@ namespace _Scripts.UI.HomeSceneUI.ButtonUI
     {
         public override void ChangeScene()
         {
+            ManagerSound.Instance.PlayEffectSound(EnumEffectSound.ButtonClick);
             int currentEnergy = PlayerPrefs.GetInt(StringPlayerPrefs.CURRENT_ENERGY, 0);
-            Debug.Log(currentEnergy);
+          
             if (currentEnergy == 0) return;
             base.ChangeScene();
+          
         }
     }
 }

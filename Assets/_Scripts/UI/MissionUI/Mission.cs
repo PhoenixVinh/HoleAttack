@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using _Scripts.ObjectPooling;
+using _Scripts.Sound;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -52,6 +53,7 @@ namespace _Scripts.UI.MissionUI
             
             
             // Using Dotween To move Object
+            ManagerSound.Instance.PlayEffectSound(EnumEffectSound.ItemMission);
             
             EffectMission.transform.localScale = new Vector3(1, 1, 1) * 1.2f;
            

@@ -1,3 +1,4 @@
+using _Scripts.Sound;
 using _Scripts.UI.PauseGameUI;
 using TMPro;
 using UnityEngine;
@@ -23,6 +24,7 @@ namespace _Scripts.UI.WinLossUI
             PlayerPrefs.SetInt(StringPlayerPrefs.CURRENT_COIN, coin);
             continueButton.onClick.AddListener(ShowNextlevel);
             this.pauseButton.gameObject.SetActive(true);
+            ManagerSound.Instance.PlayEffectSound(EnumEffectSound.LevelComplete);
         }
 
         public override void OnDisable()

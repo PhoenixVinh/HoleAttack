@@ -1,6 +1,7 @@
 using System;
 using _Scripts.ManagerScene;
 using _Scripts.ManagerScene.HomeScene;
+using _Scripts.Sound;
 using _Scripts.UI.PauseGameUI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -22,6 +23,7 @@ namespace _Scripts.UI.WinLossUI
             playOnBtn.onClick.AddListener(OnClickPlayOnBtn);
             retryBtn.onClick.AddListener(OnClickRetryBtn);
             homeBtn.onClick.AddListener(OnClickHomeBtn);
+            ManagerSound.Instance.PlayEffectSound(EnumEffectSound.FailedLevel);
         }
 
         private void OnClickHomeBtn()
