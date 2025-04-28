@@ -20,7 +20,7 @@ namespace _Scripts.Hole
                 SpawnItemMap.Instance.RemoveItem(other.gameObject);
                 TextPooling.Instance.SpawnText(HoleController.Instance.transform.position + Vector3.up * 2, score);
                 
-                ManagerMission.Instance.CheckMinusItems(other.transform.parent.GetComponent<Item>().type, transform.position);
+                ManagerMission.Instance.CheckMinusItems(other.transform.parent.GetComponent<Item>().type, other.transform.position);
                 Destroy(other.transform.parent.gameObject);
                 
                

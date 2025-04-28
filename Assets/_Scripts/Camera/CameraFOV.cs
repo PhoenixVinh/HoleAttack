@@ -47,7 +47,7 @@ namespace _Scripts.Camera
         private void FixedUpdate()
         {
 
-            float addingFOV = HoleController.Instance.transform.localScale.x * 10f;
+            float addingFOV = HoleController.Instance.transform.localScale.x * 15f;
             
             
             _virtualCamera.m_Lens.FieldOfView =
