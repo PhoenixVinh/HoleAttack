@@ -12,7 +12,11 @@ namespace _Scripts.UI.PauseGameUI
         
         public virtual void OnEnable()
         {
-            pauseButton.gameObject.SetActive(false);
+            if (pauseButton != null)
+            {
+                pauseButton.gameObject.SetActive(false);
+            }
+            
             Time.timeScale = 0;
         }
 

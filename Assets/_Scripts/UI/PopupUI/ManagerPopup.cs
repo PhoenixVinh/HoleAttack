@@ -13,6 +13,7 @@ namespace _Scripts.UI.PopupUI
             if (Instance == null)
             {
                 Instance = this;
+                DontDestroyOnLoad(this);
             }
             else
             {
@@ -24,7 +25,6 @@ namespace _Scripts.UI.PopupUI
         {
             popupBuyItemInGame.SetData(index);
             popupBuyItemInGame.gameObject.SetActive(true);
-            
         }
 
         public void ShowPopupFreeItem(int index)

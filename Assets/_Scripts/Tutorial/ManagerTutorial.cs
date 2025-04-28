@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using _Scripts.ManagerScene;
+using _Scripts.ManagerScene.HomeScene;
 using _Scripts.UI;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -36,12 +37,16 @@ namespace _Scripts.Tutorial
 
             if (index == 3)
             {
+               
                 int checkTutorialLv3 = PlayerPrefs.GetInt(StringPlayerPrefs.TUTORIAL_LEVEL_3, 0);
                 if (checkTutorialLv3 == 0)
                 {
+                    
                     PlayerPrefs.SetInt(StringPlayerPrefs.TUTORIAL_LEVEL_3, 0);
                     PlayerPrefs.Save();
+                    
                     SceneManager.LoadScene(EnumScene.HomeScene.ToString());
+                    ManagerHomeScene.Instance.LoadTutorial();
                 }
             }
             

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _Scripts.Booster;
 using _Scripts.UI.PauseGameUI;
 using TMPro;
 using UnityEngine;
@@ -6,7 +7,7 @@ using UnityEngine.UI;
 
 namespace _Scripts.UI.PopupUI
 {
-    public class PopupFreeItem : PauseGame
+    public class PopupFreeItem : MonoBehaviour
     {
         public RawImage icon;
         public TMP_Text description;
@@ -58,6 +59,15 @@ namespace _Scripts.UI.PopupUI
 
         private void AddBoosterItem()
         {
+            
+            
+            // Adding Booster
+            var boosterDataS0 = Resources.Load<BoosterDataSO>("BoosterSO/BoosterData");
+
+            boosterDataS0.Boosters[indexSpecialSkill].Amount += 3;
+            
+            
+            this.gameObject.SetActive(false);
             
         }
     }

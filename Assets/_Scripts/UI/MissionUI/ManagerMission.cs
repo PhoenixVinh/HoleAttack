@@ -25,15 +25,6 @@ namespace _Scripts.UI.MissionUI
             {
                 Instance = this;
             }
-            else
-            {
-                Destroy(this.gameObject);
-                //Instance = this; 
-                return;
-            }
-           
-            
-            //Genetate Data for Mission 
          
 
 

@@ -26,16 +26,24 @@ namespace _Scripts.ManagerScene.HomeScene
             //ShowLoseGame.SetActive(false);
         }
 
-        private void Start()
+        private async void Start()
+        {
+            LoadTutorial();
+        }
+
+        public async void LoadTutorial()
         {
             int CurrentLevel = PlayerPrefs.GetInt(StringPlayerPrefs.CURRENT_LEVEL, 1);
             if (CurrentLevel == 3)
             {
-                int showTutorialLv3 = PlayerPrefs.GetInt(StringPlayerPrefs.TUTORIAL_LEVEL_3, 0);
+                int showTutorialLv3 = PlayerPrefs.GetInt(StringPlayerPrefs.TUTORIAL_LEVEL_3);
                 if (showTutorialLv3 == 0)
                 {
                     // Show Pop Up Free Item  
+                    await Task.Delay(1000);
+                    Debug.Log(ManagerPopup.Instance == null);
                     ManagerPopup.Instance.ShowPopupFreeItem(0);
+                    PlayerPrefs.SetInt(StringPlayerPrefs.TUTORIAL_LEVEL_3, 1);
                 }
             }
         }

@@ -53,6 +53,7 @@ namespace _Scripts.UI.PopupUI
 
         public override void OnDisable()
         {
+            
             buyButton.onClick.RemoveAllListeners();
             base.OnDisable();
             

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using _Scripts.Hole;
 using DG.Tweening;
-
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -70,10 +70,12 @@ public class HoleController : MonoBehaviour
         Vector3 newScale = new Vector3(radius, localScale.y, radius);
         // Update Scale of Hole 
 
+        DOTween.Sequence()
+            .SetId("HoleUpScale")
+            .Append(transform.DOScale(newScale, 1f))
+            .OnComplete(() => OnUpLevelHole());
 
-
-        this.transform.DOScale(newScale, 1f).OnUpdate(
-            () =>  OnUpLevelHole());
+    
        
         
         this._holeLevel.SetData(amountExp);
@@ -127,5 +129,10 @@ public class HoleController : MonoBehaviour
     public bool IsProcessSkill(int index)
     {
         return this._holeSpecialSkill.UsingSkill(index);
+    }
+
+    public void OnDestroy()
+    {
+        DOTween.Kill("HoleUpScale");
     }
 }

@@ -27,6 +27,11 @@ namespace _Scripts.Booster
             {
                 Destroy(gameObject);
             }
+
+            if (boostersData == null)
+            {
+                boosterDataS0 = Resources.Load<BoosterDataSO>("BoosterSO/BoosterData");
+            }
             
         }
 

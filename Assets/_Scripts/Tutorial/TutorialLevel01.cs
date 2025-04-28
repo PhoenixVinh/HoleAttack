@@ -25,7 +25,7 @@ namespace _Scripts.Tutorial
 
 
         private bool isShowMoveMessage = false;
-        private bool isShowCollectMessage = false;
+
 
 
 
