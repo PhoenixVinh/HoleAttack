@@ -44,8 +44,8 @@ namespace _Scripts.UI.MissionUI
             
             GameObject EffectMission = MissionPooling.Instance.spawnImage();
             
-            Vector3 screenPosition = UnityEngine.Camera.main.WorldToScreenPoint(positionMinus);
-            EffectMission.transform.position = screenPosition;
+            Vector3 screenPosition = UnityEngine.Camera.main.WorldToScreenPoint(positionMinus + new Vector3(0,0,5f));
+            EffectMission.GetComponent<RectTransform>().position = screenPosition;
 
             EffectMission.GetComponent<Image>().sprite = image.sprite;
             EffectMission.SetActive(true);
@@ -54,9 +54,10 @@ namespace _Scripts.UI.MissionUI
             // Using Dotween To move Object
             
             EffectMission.transform.localScale = new Vector3(1, 1, 1) * 1.2f;
+           
             DOTween.Sequence()
                 .SetId(IdDotween)
-                .Append(EffectMission.transform.DOMove(this.transform.position + new Vector3(0, 0.5f, 0), 1.5f))
+                .Append(EffectMission.transform.DOMove(this.transform.position, 1.5f))
                 .Join(EffectMission.transform.DOScale(new Vector3(0.7f, 0.7f, 0.7f), 1.5f))
                 .SetUpdate(true)
                 .OnComplete(delegate
