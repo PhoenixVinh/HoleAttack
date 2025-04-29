@@ -86,12 +86,7 @@ namespace _Scripts.Editor.Ultils
                 }
                 ShowItemAgain();
 
-                // if (GUILayout.Button("Refresh Item"))
-                // {
-                //     ShowItemAgain();
-                // }
-                //
-                //GUILayout.EndVertical();
+     
             }
 
             if (GUILayout.Button("Clear"))

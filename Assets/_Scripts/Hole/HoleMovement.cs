@@ -15,11 +15,17 @@ namespace _Scripts.Hole
 
         public Vector2 GetDirectionMovement() => _movementDirection;
         
+        public Rigidbody rb;
+        
         public void Move(Vector2 movementDirection)
         {
             _movementDirection = movementDirection;
         }
 
+        private void Awake()
+        {
+            rb = GetComponent<Rigidbody>();
+        }
 
         private void FixedUpdate()
         {
@@ -27,7 +33,8 @@ namespace _Scripts.Hole
             CheckCanMove();
             if (canMove)
             {
-                transform.Translate(new Vector3(_movementDirection.x, 0, _movementDirection.y)*_speedMovement*Time.deltaTime);
+                rb.velocity = new Vector3(_movementDirection.x, 0, _movementDirection.y) * _speedMovement * Time.deltaTime;
+                //transform.Translate(new Vector3(_movementDirection.x, 0, _movementDirection.y)*_speedMovement*Time.deltaTime);
             }
         }
 
@@ -50,39 +57,39 @@ namespace _Scripts.Hole
             // else canMove = true;
             
             
-            Vector3 directionNormalized = new Vector3(_movementDirection.x, 0, _movementDirection.y).normalized;
-          
-            
-            // Calculate Max Position Can reach 
-            Vector3 newCircleCenter = new Vector3(transform.position.x, 0, transform.position.z) +directionNormalized*_speedMovement*Time.deltaTime;
-
-            int numberOfPoints = 8;
-            float radius = HoleController.Instance.GetCurrentRadius()/2f;
-            
-            List<Vector3> checkpoints  = new List<Vector3>();
-            // Tính toán các điểm
-            for (int i = 0; i < numberOfPoints; i++)
-            {
-                // Tính góc theta
-                float theta = i * 2 * Mathf.PI / numberOfPoints;
-
-                // Tính tọa độ x, y
-                float x = newCircleCenter.x + radius * Mathf.Cos(theta);
-                float y = newCircleCenter.z + radius * Mathf.Sin(theta);
-
-                checkpoints.Add(new Vector3(x, areaCanMove.transform.position.y, y));
-            }
-            bool checkOk = true;
-            foreach (var point in checkpoints)
-            {
-                if (!areaCanMove.bounds.Contains(point))
-                {
-                    checkOk = false;
-                    break;
-                }
-            }
-            canMove = checkOk;
-            
+            // Vector3 directionNormalized = new Vector3(_movementDirection.x, 0, _movementDirection.y).normalized;
+            //
+            //
+            // // Calculate Max Position Can reach 
+            // Vector3 newCircleCenter = new Vector3(transform.position.x, 0, transform.position.z) +directionNormalized*_speedMovement*Time.deltaTime;
+            //
+            // int numberOfPoints = 8;
+            // float radius = HoleController.Instance.GetCurrentRadius()/2f;
+            //
+            // List<Vector3> checkpoints  = new List<Vector3>();
+            // // Tính toán các điểm
+            // for (int i = 0; i < numberOfPoints; i++)
+            // {
+            //     // Tính góc theta
+            //     float theta = i * 2 * Mathf.PI / numberOfPoints;
+            //
+            //     // Tính tọa độ x, y
+            //     float x = newCircleCenter.x + radius * Mathf.Cos(theta);
+            //     float y = newCircleCenter.z + radius * Mathf.Sin(theta);
+            //
+            //     checkpoints.Add(new Vector3(x, areaCanMove.transform.position.y, y));
+            // }
+            // bool checkOk = true;
+            // foreach (var point in checkpoints)
+            // {
+            //     if (!areaCanMove.bounds.Contains(point))
+            //     {
+            //         checkOk = false;
+            //         break;
+            //     }
+            // }
+            // canMove = checkOk;
+            //
             
         }
 
