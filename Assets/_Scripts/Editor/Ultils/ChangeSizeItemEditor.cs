@@ -36,10 +36,18 @@ namespace _Scripts.Editor.Ultils
         public List<Scale> Size = new List<Scale>();
         public void OnGUI()
         {
+            
             GUILayout.Label("Change Size ", EditorStyles.boldLabel);
+            EditorGUI.BeginChangeCheck();
             levelSpawnData = (LevelSpawnData)EditorGUILayout.ObjectField("Item Spawn", levelSpawnData, typeof(LevelSpawnData), false);
             parentSpawn = (Transform)EditorGUILayout.ObjectField("Parent Spawn", parentSpawn, typeof(Transform), true);
-            
+            if (EditorGUI.EndChangeCheck())
+            {
+                Size.Clear();
+                GetData();
+                //SpawnObject();
+                ShowEditorSize = true;
+            }
           
             
 
@@ -47,15 +55,20 @@ namespace _Scripts.Editor.Ultils
             {
                 if (levelSpawnData != null)
                 {
+                   
                     GetData();
                     SpawnObject();
                     ShowEditorSize = true;
+                    
+                  
+                   
                 }
                 
             }
-
+            
             if (ShowEditorSize)
             {
+              
                 //GUILayout.BeginVertical();
                 int index = 0;
                 foreach (var item in itemDatas)
@@ -73,11 +86,11 @@ namespace _Scripts.Editor.Ultils
                 }
                 ShowItemAgain();
 
-                if (GUILayout.Button("Refresh Item"))
-                {
-                    ShowItemAgain();
-                }
-                
+                // if (GUILayout.Button("Refresh Item"))
+                // {
+                //     ShowItemAgain();
+                // }
+                //
                 //GUILayout.EndVertical();
             }
 
@@ -86,7 +99,15 @@ namespace _Scripts.Editor.Ultils
                 itemDatas.Clear();
                 levelSpawnData = null;
                 ShowEditorSize = false;
+                
+                Size.Clear();
+                while (parentSpawn.childCount > 0)
+                {
+                    DestroyImmediate(parentSpawn.GetChild(0).gameObject);
+                }
             }
+
+          
             
         }
 
@@ -154,6 +175,8 @@ namespace _Scripts.Editor.Ultils
 
         private void GetData()
         {
+            itemDatas.Clear();
+            Size = new List<Scale>();
             foreach (var listItemSpawn in levelSpawnData.listItemSpawns)
             {
                 foreach (var data in listItemSpawn.listSpawnDatas)
