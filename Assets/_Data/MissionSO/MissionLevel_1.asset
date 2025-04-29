@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: MissionLevel_1
   m_EditorClassIdentifier: 
   misstionsData:
-  - idItem: food_80
+  - idItem: food_101
     AmountItems: 19
-    image: {fileID: 21300000, guid: 7c9268cfcabccec48a9909b44d50a1f0, type: 3}
-  - idItem: food_96
+    image: {fileID: 21300000, guid: ac4b686519352b34fb6324c5052e4e60, type: 3}
+  - idItem: food_212
     AmountItems: 16
-    image: {fileID: 21300000, guid: c25aea88412e34e459637833ac17244d, type: 2}
-  - idItem: food_82
+    image: {fileID: 21300000, guid: 0b547de97b6baee4bb8b8dd5f4bfc8d1, type: 3}
+  - idItem: food_87
     AmountItems: 15
-    image: {fileID: 21300000, guid: 9f190569805327a44892c7a8a4451424, type: 3}
+    image: {fileID: 21300000, guid: 253b21516098b164bacef43dab6c6fc4, type: 3}
