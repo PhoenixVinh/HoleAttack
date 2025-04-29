@@ -8,9 +8,9 @@ public class Item : MonoBehaviour
     public string type = "food";
     
 
-    public void SetData(string foodName)
+    public void SetData(string foodName, int score)
     {
-        this.score = 1;
+        this.score = score;
         this.type = foodName;
     }
 }

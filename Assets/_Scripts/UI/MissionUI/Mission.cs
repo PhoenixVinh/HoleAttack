@@ -53,7 +53,11 @@ namespace _Scripts.UI.MissionUI
             
             
             // Using Dotween To move Object
-            ManagerSound.Instance.PlayEffectSound(EnumEffectSound.ItemMission);
+            if (ManagerSound.Instance != null)
+            {
+                ManagerSound.Instance.PlayEffectSound(EnumEffectSound.ItemMission);
+            }
+            
             
             EffectMission.transform.localScale = new Vector3(1, 1, 1) * 1.2f;
            
