@@ -9,13 +9,14 @@ namespace _Scripts.Camera
     {
         public CinemachineVirtualCamera _virtualCamera;
 
-        public float baseFOV = 60f;
+        public float baseFOV = 10f;
+        public float scaleByHole = 1f;
         public float _targetFOV;
 
         private void Start()
         {
             _virtualCamera = GetComponent<CinemachineVirtualCamera>();
-            _targetFOV = _virtualCamera.m_Lens.FieldOfView;
+            _targetFOV = _virtualCamera.m_Lens.OrthographicSize;
         }
 
 
@@ -47,11 +48,11 @@ namespace _Scripts.Camera
         private void FixedUpdate()
         {
 
-            float addingFOV = HoleController.Instance.transform.localScale.x * 15f;
+            float addingFOV = HoleController.Instance.transform.localScale.x * scaleByHole;
             
             
-            _virtualCamera.m_Lens.FieldOfView =
-                Mathf.Lerp(_virtualCamera.m_Lens.FieldOfView, baseFOV + addingFOV, Time.deltaTime);
+            _virtualCamera.m_Lens.OrthographicSize =
+                Mathf.Lerp(_virtualCamera.m_Lens.OrthographicSize, baseFOV + addingFOV, Time.deltaTime);
         }
 
         private void UpdateFOV() 

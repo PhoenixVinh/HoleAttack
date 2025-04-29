@@ -16,7 +16,7 @@ namespace _Scripts.Hole
             if (other.CompareTag("Item"))
             {
 
-                ManagerSound.Instance.PlayEffectSound(EnumEffectSound.EatItem);
+//                ManagerSound.Instance.PlayEffectSound(EnumEffectSound.EatItem);
                 int score = other.transform.parent.GetComponent<Item>().score;
                 ItemEvent.OnAddScore?.Invoke(score);
                 SpawnItemMap.Instance.RemoveItem(other.gameObject);

@@ -1,7 +1,6 @@
 
 using System.Threading.Tasks;
 using _Scripts.Booster;
-using _Scripts.Data.LevelGamePlayData;
 using _Scripts.Map.MapSpawnItem;
 using _Scripts.ObjectPooling;
 using _Scripts.Tutorial;

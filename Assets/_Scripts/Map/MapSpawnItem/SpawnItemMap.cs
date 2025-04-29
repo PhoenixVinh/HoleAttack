@@ -1,6 +1,6 @@
 
 using System.Collections.Generic;
-using _Scripts.Data.LevelGamePlayData;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,17 +9,9 @@ namespace _Scripts.Map.MapSpawnItem
     public class SpawnItemMap : MonoBehaviour
     {
         public static SpawnItemMap Instance;
-
-        private void Awake()
-        {
-            Instance = this;
-            //SpawnMap();
-        }
-
         
-
-
-
+        private ItemScoreSO itemScoreSO;
+        
         public LevelSpawnData levelSpawnData;
         public string prefabPath = "PrefabInstance/";
         public List<string> subfolderLoad;
@@ -27,6 +19,20 @@ namespace _Scripts.Map.MapSpawnItem
         
         
         public Dictionary<string, List<GameObject>> mapObjects = new Dictionary<string, List<GameObject>>();
+
+        private void Awake()
+        {
+            Instance = this;
+            //SpawnMap();
+            //Get Scroce Data 
+            itemScoreSO = Resources.Load<ItemScoreSO>("ItemScoreSO/ItemScoreHole");
+            
+        }
+
+        
+
+
+
 
 
 
@@ -68,6 +74,14 @@ namespace _Scripts.Map.MapSpawnItem
                 {
                     prefabInstance = spawnedObjects[nameItem];
                 }
+
+                int scoreItem = 1;
+                var scoreData = itemScoreSO.itemScoreData.FirstOrDefault(e => e.itemName == nameItem);
+                if (scoreData != null)
+                {
+                    scoreItem = scoreData.score;
+                }
+                
                 
                 // Spawner Item
                 foreach (var dataspawn in item.listSpawnDatas)
@@ -83,7 +97,7 @@ namespace _Scripts.Map.MapSpawnItem
                     }
 
                     Item itemType =  itemSpawn.AddComponent<Item>();
-                    itemType.SetData(itemSpawn.name);
+                    itemType.SetData(itemSpawn.name, scoreItem);
                     if (!mapObjects.ContainsKey(nameItem))
                     {
                         mapObjects.Add(nameItem, new List<GameObject>());
