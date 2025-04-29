@@ -10,7 +10,7 @@ namespace _Scripts.Map.MapSpawnItem
     {
         public static SpawnItemMap Instance;
         
-        private ItemScoreSO itemScoreSO;
+       
         
         public LevelSpawnData levelSpawnData;
         public string prefabPath = "PrefabInstance/";
@@ -25,7 +25,7 @@ namespace _Scripts.Map.MapSpawnItem
             Instance = this;
             //SpawnMap();
             //Get Scroce Data 
-            itemScoreSO = Resources.Load<ItemScoreSO>("ItemScoreSO/ItemScoreHole");
+          
             
         }
 
