@@ -62,7 +62,7 @@ public class ManagerLevelGamePlay : MonoBehaviour
         HoleController.Instance.SetPosition(Vector3.zero);
         HoleController.Instance.gameObject.SetActive(false);
         Task.Delay(500);
-        SpawnItemMap.Instance.SetData(level.levelSpawnData);
+        SpawnItemMap.Instance.SetData(level.levelSpawnData, level.ScoreDatas);
         ManagerMission.Instance.SetData(level.missionData);
         ColdownTime.Instance.SetData(level.timeToComplete);
         Task.Delay(100);

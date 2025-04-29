@@ -459,7 +459,7 @@ MonoBehaviour:
       s:
         x: 0.31
         y: 0.31
-        z: 10.31
+        z: 0.31
       kinematic: 1
     - p:
         x: -1.3

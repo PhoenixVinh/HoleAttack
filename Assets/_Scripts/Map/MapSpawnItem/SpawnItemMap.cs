@@ -15,7 +15,7 @@ namespace _Scripts.Map.MapSpawnItem
         public LevelSpawnData levelSpawnData;
         public string prefabPath = "PrefabInstance/";
         public List<string> subfolderLoad;
-        
+        public List<ItemScoreData> itemScores;
         
         
         public Dictionary<string, List<GameObject>> mapObjects = new Dictionary<string, List<GameObject>>();
@@ -37,9 +37,10 @@ namespace _Scripts.Map.MapSpawnItem
 
 
 
-        public void SetData(LevelSpawnData levelSpawnData)
+        public void SetData(LevelSpawnData levelSpawnData, List<ItemScoreData> itemScoreData)
         {
             this.levelSpawnData = levelSpawnData;
+            this.itemScores = itemScoreData;
             SpawnMap();
         }
         
@@ -76,11 +77,15 @@ namespace _Scripts.Map.MapSpawnItem
                 }
 
                 int scoreItem = 1;
-                var scoreData = itemScoreSO.itemScoreData.FirstOrDefault(e => e.itemName == nameItem);
-                if (scoreData != null)
+                foreach (var score in itemScores)
                 {
-                    scoreItem = scoreData.score;
+                    if (score.itemName == nameItem)
+                    {
+                        scoreItem = score.score;
+                        break;
+                    }
                 }
+                
                 
                 
                 // Spawner Item

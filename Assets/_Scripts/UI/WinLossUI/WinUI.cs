@@ -24,7 +24,8 @@ namespace _Scripts.UI.WinLossUI
             PlayerPrefs.SetInt(StringPlayerPrefs.CURRENT_COIN, coin);
             continueButton.onClick.AddListener(ShowNextlevel);
             this.pauseButton.gameObject.SetActive(true);
-            ManagerSound.Instance.PlayEffectSound(EnumEffectSound.LevelComplete);
+            if(ManagerSound.Instance != null)
+                ManagerSound.Instance.PlayEffectSound(EnumEffectSound.LevelComplete);
         }
 
         public override void OnDisable()

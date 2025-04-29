@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5d6630e612244f448a106491e5920abd
+guid: 5600e6504aa7398439d21c6f3bc0387e
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,7 +7,7 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Tex_Floor
+      name: TEX_Floor
     second: {fileID: 2100000, guid: 7b17424856597f24f86f5d65ff69587d, type: 2}
   - first:
       type: UnityEngine:Material

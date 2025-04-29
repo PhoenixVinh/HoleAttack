@@ -70,7 +70,7 @@ namespace _Scripts.Hole
                 float x = newCircleCenter.x + radius * Mathf.Cos(theta);
                 float y = newCircleCenter.z + radius * Mathf.Sin(theta);
 
-                checkpoints.Add(new Vector3(x, 0, y));
+                checkpoints.Add(new Vector3(x, areaCanMove.transform.position.y, y));
             }
             bool checkOk = true;
             foreach (var point in checkpoints)
