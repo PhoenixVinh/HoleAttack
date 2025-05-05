@@ -41,8 +41,15 @@ namespace _Scripts.Editor.Ultils
             EditorGUI.BeginChangeCheck();
             levelSpawnData = (LevelSpawnData)EditorGUILayout.ObjectField("Item Spawn", levelSpawnData, typeof(LevelSpawnData), false);
             parentSpawn = (Transform)EditorGUILayout.ObjectField("Parent Spawn", parentSpawn, typeof(Transform), true);
+            if (levelSpawnData == null) return;
+            
             if (EditorGUI.EndChangeCheck())
             {
+                while (parentSpawn.childCount > 0)
+                {
+                    DestroyImmediate(parentSpawn.GetChild(0).gameObject);
+                }
+                
                 Size.Clear();
                 GetData();
                 //SpawnObject();

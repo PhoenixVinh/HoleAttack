@@ -54,6 +54,7 @@ namespace _Scripts.Map.MapSpawnItem
             if (levelSpawnData == null) return;
             mapObjects.Clear();
             Dictionary<string, GameObject> spawnedObjects = new Dictionary<string,GameObject>();
+            spawnedObjects.Clear();
             foreach(var item in levelSpawnData.listItemSpawns)
             {
                 string nameItem = item.id;
@@ -117,6 +118,8 @@ namespace _Scripts.Map.MapSpawnItem
                 
                 
             }
+
+            levelSpawnData = null;
         }
 
         public List<GameObject> GetMappingObject(Dictionary<string, int> suggestItems)

@@ -11,11 +11,15 @@ namespace _Scripts.Hole
         private float _speedMovement;
         private bool canMove = true;
 
-        [SerializeField]private Collider areaCanMove;
+        
 
         public Vector2 GetDirectionMovement() => _movementDirection;
         
         public Rigidbody rb;
+
+
+
+        private Collider[] hits;
         
         public void Move(Vector2 movementDirection)
         {
@@ -24,7 +28,8 @@ namespace _Scripts.Hole
 
         private void Awake()
         {
-            rb = GetComponent<Rigidbody>();
+          
+            hits = new Collider[5];
         }
 
         private void FixedUpdate()
@@ -33,8 +38,8 @@ namespace _Scripts.Hole
             CheckCanMove();
             if (canMove)
             {
-                rb.velocity = new Vector3(_movementDirection.x, 0, _movementDirection.y) * _speedMovement * Time.deltaTime;
-                //transform.Translate(new Vector3(_movementDirection.x, 0, _movementDirection.y)*_speedMovement*Time.deltaTime);
+            
+                transform.Translate(new Vector3(_movementDirection.x, 0, _movementDirection.y)*_speedMovement*Time.deltaTime);
             }
         }
 
@@ -57,14 +62,20 @@ namespace _Scripts.Hole
             // else canMove = true;
             
             
-            // Vector3 directionNormalized = new Vector3(_movementDirection.x, 0, _movementDirection.y).normalized;
-            //
-            //
+             Vector3 directionNormalized = new Vector3(_movementDirection.x, 0, _movementDirection.y).normalized;
+         
             // // Calculate Max Position Can reach 
-            // Vector3 newCircleCenter = new Vector3(transform.position.x, 0, transform.position.z) +directionNormalized*_speedMovement*Time.deltaTime;
+            Vector3 newCircleCenter = new Vector3(transform.position.x, 0, transform.position.z) +directionNormalized*_speedMovement/2;
+            
             //
             // int numberOfPoints = 8;
-            // float radius = HoleController.Instance.GetCurrentRadius()/2f;
+            float radius = HoleController.Instance.GetCurrentRadius()/2f;
+            
+            
+            
+            int numberCollider = Physics.OverlapSphereNonAlloc(newCircleCenter, radius, hits, LayerMask.GetMask("Bound"));
+           
+            canMove = numberCollider == 0;
             //
             // List<Vector3> checkpoints  = new List<Vector3>();
             // // Tính toán các điểm
@@ -102,10 +113,7 @@ namespace _Scripts.Hole
             this._speedMovement = speedMovement;
         }
 
-        public void SetColliderArea(Collider collider)
-        {
-            this.areaCanMove = collider;
-        }
+      
 
         public void OnDrawGizmosSelected()
         {

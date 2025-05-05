@@ -11,9 +11,8 @@ namespace _Scripts.Tutorial
     public class TutorialLevel01 : BaseTutorial
     {
 
-        public Collider limitCollider;
-        public Collider groundCollider;
-        
+        [Header("Collider Bounds")]
+        public GameObject wall;
         
         
         [Header("UI Elements")]
@@ -34,7 +33,7 @@ namespace _Scripts.Tutorial
         
         private void Start()
         {
-            this.holeController.HoleMovement.SetColliderArea(this.limitCollider);
+            //this.holeController.HoleMovement.SetColliderArea(this.limitCollider);
             // ShowPanel
             StartCoroutine(ShowMoveMessage());
             StartCoroutine(ShowCollectMessage());
@@ -63,7 +62,7 @@ namespace _Scripts.Tutorial
             yield return new WaitUntil(
                 () => ManagerLevelGamePlay.Instance.SpawnLevel().Result
             );
-          
+            wall.SetActive(true);
             moveMessage.SetActive(true);
             //moveMessage.transform.SetParent(this.HoleController.transform);
             
@@ -104,18 +103,19 @@ namespace _Scripts.Tutorial
 
                         Destroy(collectMessage);
                         panels.SetActive(false);
+                        wall.SetActive(false);
                     }
 
                 );
                 
                
-                holeController.HoleMovement.SetColliderArea(this.groundCollider);
+            
                 missionMessage.SetActive(true);
                 await Task.Delay(3000);
                 missionMessage.transform.DOScale(Vector3.zero, 0.3f).OnComplete(
                     () => Destroy(missionMessage)
                     );
-                // Change Area Movement Again 
+
             }
         }
     }
