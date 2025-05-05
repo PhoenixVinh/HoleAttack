@@ -55,7 +55,7 @@ public class Position
 
     public Vector3 ToVector3()
     {
-        return new Vector3(x, y, z);
+        return new Vector3(this.x, this.y, this.z);
     }
 }
 [Serializable]
@@ -84,7 +84,7 @@ public class Rotation
 
     public Vector3 ToVector3()
     {
-        return new Vector3(x, y, z);
+        return new Vector3(this.x, this.y, this.z);
     }
 }
 
@@ -114,6 +114,6 @@ public class Scale
 
     public Vector3 ToVector3()
     {
-        return new Vector3(x, y, z);
+        return new Vector3(this.x, this.y, this.z);
     }
 }

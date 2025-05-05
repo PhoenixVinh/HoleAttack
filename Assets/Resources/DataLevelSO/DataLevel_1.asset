@@ -17,8 +17,8 @@ MonoBehaviour:
   timeToComplete: 20
   ScoreDatas:
   - itemName: food_87
-    score: 2
-  - itemName: food_212
     score: 4
+  - itemName: food_212
+    score: 5
   - itemName: food_101
     score: 6

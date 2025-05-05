@@ -19,11 +19,12 @@ public class ManagerLevelGamePlay : MonoBehaviour
     private void Awake()
     {
         if(Instance == null) Instance = this;
-        else if (Instance != this) Destroy(gameObject);
+        else  Destroy(gameObject);
   
         
         currentLevel = PlayerPrefs.GetInt(StringPlayerPrefs.CURRENT_LEVEL, 1);
-        LoadLevelSO();
+        level = ScriptableObject.CreateInstance<LevelGamePlaySO>();
+       
     }
    
 
@@ -31,8 +32,10 @@ public class ManagerLevelGamePlay : MonoBehaviour
     private void Start()
     {
        
-        ManagerTutorial.Instance.ShowTutorials(currentLevel);
+        LoadLevelSO();
         SpawnLevel();
+        ManagerTutorial.Instance.ShowTutorials(currentLevel);
+        
        
        
     }
@@ -46,6 +49,7 @@ public class ManagerLevelGamePlay : MonoBehaviour
 
     public bool LoadLevelSO()
     {
+        
         level = Resources.Load<LevelGamePlaySO>($"DataLevelSO/DataLevel_{currentLevel}");
         if (level == null)
         {
@@ -57,11 +61,14 @@ public class ManagerLevelGamePlay : MonoBehaviour
 
     public Task<bool>  SpawnLevel()
     {
+        
+        
+        
         MissionPooling.Instance.DisactiveAllItem();
         HoleController.Instance.Reset();
         HoleController.Instance.SetPosition(Vector3.zero);
         HoleController.Instance.gameObject.SetActive(false);
-        Task.Delay(500);
+        Task.Delay(200);
         SpawnItemMap.Instance.SetData(level.levelSpawnData, level.ScoreDatas);
         ManagerMission.Instance.SetData(level.missionData);
         ColdownTime.Instance.SetData(level.timeToComplete);

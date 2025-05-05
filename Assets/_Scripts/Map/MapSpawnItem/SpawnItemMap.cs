@@ -16,13 +16,22 @@ namespace _Scripts.Map.MapSpawnItem
         public string prefabPath = "PrefabInstance/";
         public List<string> subfolderLoad;
         public List<ItemScoreData> itemScores;
-        
-        
-        public Dictionary<string, List<GameObject>> mapObjects = new Dictionary<string, List<GameObject>>();
+
+
+        public Dictionary<string, List<GameObject>> mapObjects;
 
         private void Awake()
         {
-            Instance = this;
+            if (Instance == null)
+            {
+                Instance = this;
+                mapObjects = new Dictionary<string, List<GameObject>>();
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+            //Instance = this;
             //SpawnMap();
             //Get Scroce Data 
           
@@ -39,7 +48,9 @@ namespace _Scripts.Map.MapSpawnItem
 
         public void SetData(LevelSpawnData levelSpawnData, List<ItemScoreData> itemScoreData)
         {
+            this.levelSpawnData = ScriptableObject.CreateInstance<LevelSpawnData>();
             this.levelSpawnData = levelSpawnData;
+            this.itemScores.Clear();
             this.itemScores = itemScoreData;
             SpawnMap();
         }
@@ -52,12 +63,21 @@ namespace _Scripts.Map.MapSpawnItem
                 DestroyImmediate(transform.GetChild(0).gameObject);
             }
             if (levelSpawnData == null) return;
-            mapObjects.Clear();
+            if (mapObjects != null)
+            {
+                mapObjects.Clear();
+            }
+            else
+            {
+                mapObjects = new Dictionary<string, List<GameObject>>();
+            }
+            
             Dictionary<string, GameObject> spawnedObjects = new Dictionary<string,GameObject>();
             spawnedObjects.Clear();
             foreach(var item in levelSpawnData.listItemSpawns)
             {
                 string nameItem = item.id;
+                Debug.Log(nameItem + " Spawned: " + "With Size: " + item.listSpawnDatas[0].s.ToVector3().ToString());
                 GameObject prefabInstance = null;
                 if (!spawnedObjects.ContainsKey(nameItem))
                 {

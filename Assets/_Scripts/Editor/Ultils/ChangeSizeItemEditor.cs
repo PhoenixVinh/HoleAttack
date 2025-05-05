@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
@@ -33,7 +34,7 @@ namespace _Scripts.Editor.Ultils
         }
 
         public bool ShowEditorSize = false;
-        public List<Scale> Size = new List<Scale>();
+        public List<Scale> Size;
         public void OnGUI()
         {
             
@@ -49,11 +50,12 @@ namespace _Scripts.Editor.Ultils
                 {
                     DestroyImmediate(parentSpawn.GetChild(0).gameObject);
                 }
-                
-                Size.Clear();
-                GetData();
+
+                Size = null;
+            
+                //GetData();
                 //SpawnObject();
-                ShowEditorSize = true;
+                ShowEditorSize = false;
             }
           
             
@@ -76,7 +78,9 @@ namespace _Scripts.Editor.Ultils
             if (ShowEditorSize)
             {
               
+                
                 //GUILayout.BeginVertical();
+                
                 int index = 0;
                 foreach (var item in itemDatas)
                 {
@@ -98,15 +102,22 @@ namespace _Scripts.Editor.Ultils
 
             if (GUILayout.Button("Clear"))
             {
+                var serializedObject = new SerializedObject(levelSpawnData);
+                serializedObject.ApplyModifiedProperties();
+                EditorUtility.SetDirty(levelSpawnData);
+                AssetDatabase.SaveAssets();
                 itemDatas.Clear();
-                levelSpawnData = null;
-                ShowEditorSize = false;
-                
-                Size.Clear();
                 while (parentSpawn.childCount > 0)
                 {
                     DestroyImmediate(parentSpawn.GetChild(0).gameObject);
                 }
+                
+                
+                levelSpawnData = null;
+                ShowEditorSize = false;
+
+                Size = null;
+
             }
 
           
@@ -177,8 +188,9 @@ namespace _Scripts.Editor.Ultils
 
         private void GetData()
         {
-            itemDatas.Clear();
+            itemDatas = new Dictionary<string, List<ItemSpawnData>>();
             Size = new List<Scale>();
+            
             foreach (var listItemSpawn in levelSpawnData.listItemSpawns)
             {
                 foreach (var data in listItemSpawn.listSpawnDatas)
@@ -187,7 +199,8 @@ namespace _Scripts.Editor.Ultils
                     {
                         itemDatas[listItemSpawn.id] = new List<ItemSpawnData>();
                         itemDatas[listItemSpawn.id].Add(data);
-                        Size.Add(data.s);
+                        Debug.Log("Scale: " + data.s.ToVector3().ToString());
+                        Size.Add(new Scale(data.s.ToVector3()));
                     }
                     else
                     {
@@ -221,8 +234,26 @@ namespace _Scripts.Editor.Ultils
             Debug.LogWarning($"Prefab '{prefabName}' not found in Resources");
             return null;
         }
-        
-        
-        
+
+        public void OnDestroy()
+        {
+            
+            var serializedObject = new SerializedObject(levelSpawnData);
+            serializedObject.ApplyModifiedProperties();
+            EditorUtility.SetDirty(levelSpawnData);
+            AssetDatabase.SaveAssets();
+            itemDatas = null;
+            Size = null;
+            while (parentSpawn.childCount > 0)
+            {
+                DestroyImmediate(parentSpawn.GetChild(0).gameObject);
+            }
+            
+            parentSpawn = null;
+            
+            ShowEditorSize = false;
+            
+            levelSpawnData = null;
+        }
     }
 }
