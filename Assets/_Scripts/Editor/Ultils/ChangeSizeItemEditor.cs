@@ -80,7 +80,7 @@ namespace _Scripts.Editor.Ultils
               
                 
                 //GUILayout.BeginVertical();
-                
+                EditorGUI.BeginChangeCheck();
                 int index = 0;
                 foreach (var item in itemDatas)
                 {
@@ -95,7 +95,12 @@ namespace _Scripts.Editor.Ultils
                     GUILayout.EndHorizontal();
                     index++;
                 }
-                ShowItemAgain();
+
+                if (EditorGUI.EndChangeCheck())
+                {
+                    ShowItemAgain();
+                }
+                
 
      
             }
