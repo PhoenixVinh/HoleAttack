@@ -35,6 +35,8 @@ namespace _Scripts.Editor.Ultils
 
         public bool ShowEditorSize = false;
         public List<Scale> Size;
+        
+        
         public void OnGUI()
         {
             
@@ -81,6 +83,7 @@ namespace _Scripts.Editor.Ultils
                 
                 //GUILayout.BeginVertical();
                 EditorGUI.BeginChangeCheck();
+                
                 int index = 0;
                 foreach (var item in itemDatas)
                 {
@@ -95,7 +98,7 @@ namespace _Scripts.Editor.Ultils
                     GUILayout.EndHorizontal();
                     index++;
                 }
-
+                EditorGUILayout.EndScrollView();
                 if (EditorGUI.EndChangeCheck())
                 {
                     ShowItemAgain();

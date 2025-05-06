@@ -9,10 +9,10 @@ public class ColdownTime : MonoBehaviour, IPrecent
 {
     
     public static ColdownTime Instance;
-    
+    [SerializeField]private Image _fillTimer;
     
     private TMP_Text _txtDisplayTime;
-    private Slider _slider;
+    
     
     public float ColdownTimeComplete = 300;
     private float _timeColdown = 0;
@@ -31,7 +31,7 @@ public class ColdownTime : MonoBehaviour, IPrecent
     {
         _timeColdown = ColdownTimeComplete;
         _txtDisplayTime = transform.Find("LabelTime").GetComponent<TMP_Text>();
-        _slider = transform.GetChild(1).GetComponent<Slider>();
+       
 
     }
 
@@ -70,7 +70,7 @@ public class ColdownTime : MonoBehaviour, IPrecent
         
             TimeSpan timeSpan = TimeSpan.FromSeconds(Mathf.CeilToInt(_timeColdown));
             this._txtDisplayTime.text =  string.Format("{0:D2}:{1:D2}", timeSpan.Minutes, timeSpan.Seconds);
-            _slider.value = Precent();
+            _fillTimer.fillAmount = Precent();
         }
         else
         {
