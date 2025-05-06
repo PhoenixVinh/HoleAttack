@@ -35,6 +35,12 @@ namespace _Scripts.Tutorial
         {
             //this.holeController.HoleMovement.SetColliderArea(this.limitCollider);
             // ShowPanel
+            isShowMoveMessage = false;
+            amountItemCollect = 16;
+            panels.SetActive(false);
+            moveMessage.SetActive(false);
+            collectMessage.SetActive(false);
+            missionMessage.SetActive(false);
             StartCoroutine(ShowMoveMessage());
             StartCoroutine(ShowCollectMessage());
         }

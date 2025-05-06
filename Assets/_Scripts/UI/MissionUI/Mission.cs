@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using _Scripts.Effects;
 using _Scripts.ObjectPooling;
 using _Scripts.Sound;
 using DG.Tweening;
@@ -18,6 +19,8 @@ namespace _Scripts.UI.MissionUI
         [SerializeField]private TMP_Text _text;
         [SerializeField]private Image image;
 
+        
+        [SerializeField] private ParticleSystem particle;
 
         public bool IsDone() => amountItem == 0;
         public int GetAmountItem() => amountItem;
@@ -27,6 +30,7 @@ namespace _Scripts.UI.MissionUI
 
         public void SetData(MissionData missionData)
         {
+            particle.Stop();
             this.amountItem = missionData.AmountItems;
             this.itemType = missionData.idItem;
             _text.text = this.amountItem.ToString();
@@ -40,8 +44,7 @@ namespace _Scripts.UI.MissionUI
 
         private void AddItem(Vector3 positionMinus)
         {
-            amountItem--;
-            amountItem = amountItem >= 0 ? amountItem : 0;
+            
             
             GameObject EffectMission = MissionPooling.Instance.spawnImage();
             
@@ -60,25 +63,33 @@ namespace _Scripts.UI.MissionUI
             
             
             EffectMission.transform.localScale = new Vector3(1, 1, 1) * 1.2f;
-           
+            amountItem--;
+            amountItem = amountItem >= 0 ? amountItem : 0;
             DOTween.Sequence()
                 .SetId(IdDotween)
-                .Append(EffectMission.transform.DOMove(this.transform.position, 1.5f))
-                .Join(EffectMission.transform.DOScale(new Vector3(0.7f, 0.7f, 0.7f), 1.5f))
+                .Append(EffectMission.transform.DOMove(this.transform.position, 1.2f))
+                .Join(EffectMission.transform.DOScale(new Vector3(0.7f, 0.7f, 0.7f), 1.2f))
                 .SetUpdate(true)
                 .OnComplete(delegate
                 {
                     EffectMission.SetActive(false);
+                    
+                    DOTween.Sequence()
+                        .Append(transform.DOScale(Vector3.one*1.2f, 0.2f))
+                        .Append(transform.DOScale(Vector3.one, 0.1f));
                     this._text.text = this.amountItem.ToString();
+                    particle.Play();
+                    
                 });
+            
         }
 
         private void OnDestroy()
         {
-            //if(_sequence != null)
-                //DOTween.Kill(_sequence);
-            DOTween.Kill(IdDotween);
             
+            DOTween.Kill(IdDotween);
+            DOTween.KillAll();
+
         }
     }
 }

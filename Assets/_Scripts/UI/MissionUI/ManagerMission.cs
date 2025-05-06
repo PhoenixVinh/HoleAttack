@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using _Scripts.Event;
+using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -56,7 +57,39 @@ namespace _Scripts.UI.MissionUI
             TypeItems[itemType].MinusItem(position);
             if (TypeItems[itemType].IsDone())
             {
-                TypeItems.Remove(itemType);
+               
+                Sequence sequence = DOTween.Sequence();
+                sequence.SetDelay(1.2f);
+                
+                // Append rotation to the sequence
+                sequence.Append(
+                    TypeItems[itemType].transform.DORotate(
+                            new Vector3(0, 360*3, 0),
+                            1,
+                            RotateMode.FastBeyond360
+                        )
+                        .SetEase(Ease.Linear) // Smooth, consistent speed
+                );
+                
+                
+
+                // Append a callback to destroy the GameObject when the sequence completes
+                sequence.AppendCallback(() =>
+                {
+                    TypeItems[itemType].transform.DOScale(Vector3.one*0.3f, 0.5f).OnComplete(
+                        () =>
+                        {
+                            GameObject game = TypeItems[itemType].gameObject; 
+                            
+                            TypeItems.Remove(itemType);
+                            
+                            Destroy(game);
+                        }
+                        );
+                   
+                    
+                });
+                
             }
 
             if (TypeItems.Count == 0)
@@ -115,6 +148,12 @@ namespace _Scripts.UI.MissionUI
         {
             this.MissionsSO = mission;
             CreateMissions();
+        }
+
+
+        public void OnDestroy()
+        {
+            DOTween.KillAll();
         }
     }
 }

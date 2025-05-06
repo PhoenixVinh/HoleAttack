@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using _Scripts.Effects;
 using _Scripts.Hole;
 using DG.Tweening;
 using Unity.VisualScripting;
@@ -23,7 +24,7 @@ public class HoleController : MonoBehaviour
     [Header("Variables")]
     public float _speedMovement;
     public float _radious;
-
+    [Header("Effects")] public HoleScaleEffect holeScaleEffect;
 
     
     
@@ -43,11 +44,13 @@ public class HoleController : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        holeScaleEffect.gameObject.SetActive(false);
         _holeMovement = GetComponent<HoleMovement>();
         //_blackHole = GetComponent<BlackHole>();
         _holeLevel = GetComponent<HoleLevel>();
         _holeSpecialSkill = GetComponent<HoleSpecialSkill>();
         SetData();
+        
     }
 
     
@@ -64,18 +67,25 @@ public class HoleController : MonoBehaviour
     }
 
 
-    public void LoadLevel(int amountExp, float radius)
+    public void LoadLevel(int amountExp, float radius, bool isAnim)
     {
         Vector3 localScale = transform.localScale;
         Vector3 newScale = new Vector3(radius, localScale.y, radius);
         // Update Scale of Hole 
+        if (isAnim)
+        {
+            DOTween.Sequence()
+                .SetId("HoleUpScale")
+                .Append(transform.DOScale(newScale, 1f))
+                .OnComplete(() => OnUpLevelHole());
+        }
+        else
+        {
+            transform.localScale = newScale;
+        }
+       
 
-        DOTween.Sequence()
-            .SetId("HoleUpScale")
-            .Append(transform.DOScale(newScale, 1f))
-            .OnComplete(() => OnUpLevelHole());
-
-    
+        
        
         
         this._holeLevel.SetData(amountExp);
@@ -131,8 +141,30 @@ public class HoleController : MonoBehaviour
         return this._holeSpecialSkill.UsingSkill(index);
     }
 
+    public void UpScaleAnim(float dataLevelRadious)
+    {
+        Vector3 scaleUp = new Vector3(dataLevelRadious, transform.localScale.y, dataLevelRadious);
+        
+        
+        DOTween.Sequence().SetId("HoleAnim")
+            .Append(transform.DOScale(scaleUp*1.5f,0.3f))
+            .Append(transform.DOScale(scaleUp,0.3f));
+        
+
+    }
+
+
+    public void PlayHoleScaleUp()
+    {
+        holeScaleEffect.gameObject.SetActive(true);
+        holeScaleEffect.PlayEffect(transform.localScale.x);
+    }
     public void OnDestroy()
     {
         DOTween.Kill("HoleUpScale");
+        DOTween.Kill("HoleAnim");
     }
+
+
+   
 }

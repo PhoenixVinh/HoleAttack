@@ -106,5 +106,6 @@ public class ColdownTime : MonoBehaviour, IPrecent
     {
         this._timeColdown += timeAdd;
         this.ColdownTimeComplete = _timeColdown;
+       
     }
 }

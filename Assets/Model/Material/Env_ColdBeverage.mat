@@ -11,6 +11,7 @@ Material:
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords:
   - _GLOSSYREFLECTIONS_OFF
+  - _SPECULARHIGHLIGHTS_OFF
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -189,7 +190,7 @@ Material:
     - _Specular: 0
     - _SpecularBrightness: 1
     - _SpecularHair: 0
-    - _SpecularHighlights: 1
+    - _SpecularHighlights: 0
     - _SpecularSmoothness: 20
     - _SpecularUV: 0
     - _SrcBlend: 1

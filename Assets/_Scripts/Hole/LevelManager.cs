@@ -50,9 +50,20 @@ public class LevelManager : MonoBehaviour
         {
             expUpLevel = 100000;
         }
+
+        if (currentLevel == 0)
+        {
+            HoleController.Instance.LoadLevel(expUpLevel, dataLevel.radious, false);
+        }
+        else
+        {
+            HoleController.Instance.LoadLevel(expUpLevel, dataLevel.radious, true);
+            HoleController.Instance.UpScaleAnim(dataLevel.radious);
+            HoleController.Instance.PlayHoleScaleUp();
+        }
        
-        HoleController.Instance.LoadLevel(expUpLevel, dataLevel.radious);
-        
+       
+
     }
 
     public void ResetLevel()

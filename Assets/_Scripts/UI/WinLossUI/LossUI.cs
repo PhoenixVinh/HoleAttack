@@ -1,40 +1,71 @@
 using System;
+using System.Collections;
 using _Scripts.ManagerScene;
 using _Scripts.ManagerScene.HomeScene;
 using _Scripts.Sound;
 using _Scripts.UI.PauseGameUI;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 using UnityEngine.UI;
+
 
 namespace _Scripts.UI.WinLossUI
 {
     public class LossUI: PauseGame
     {
+        [Header("Group Button")]
         public Button playOnBtn;
         public Button retryBtn;
-        public Button homeBtn;
+        public Button continueBtn;
 
         
         public float timeAdd = 60f;
         public int pricePlayOn = 600;
-        private void Start()
+
+        [Header("Lose UI 2")] public GameObject loseUI2;
+        
+        public override void OnEnable()
         {
+            base.OnEnable();
             playOnBtn.onClick.AddListener(OnClickPlayOnBtn);
             retryBtn.onClick.AddListener(OnClickRetryBtn);
-            homeBtn.onClick.AddListener(OnClickHomeBtn);
-            ManagerSound.Instance.PlayEffectSound(EnumEffectSound.FailedLevel);
+            continueBtn.onClick.AddListener(OnClickContinueBtn);
+            this.loseUI2.SetActive(false);
+            StartCoroutine(DelayAppearButton());
+           
+            
         }
 
-        private void OnClickHomeBtn()
+        private IEnumerator DelayAppearButton()
+        {
+            continueBtn.gameObject.SetActive(false);
+            yield return new WaitForSecondsRealtime (3f);
+            continueBtn.gameObject.SetActive(true);
+        }
+        
+
+
+        public override void OnDisable()
+        {
+            base.OnDisable();
+            // playOnBtn.onClick.RemoveAllListeners();
+            // retryBtn.onClick.RemoveAllListeners();
+            // continueBtn.onClick.RemoveAllListeners();
+            
+        }
+
+        private void OnClickContinueBtn()
         {
             this.gameObject.SetActive(false);
-            SceneManager.LoadScene(EnumScene.HomeScene.ToString());
-            ManagerHomeScene.Instance.ShowLoseGameUI();
+            this.loseUI2.SetActive(true);
+            
         }
 
         private void OnClickRetryBtn()
         {
+           
             AddTimeGamePlay();
             this.gameObject.SetActive(false);   
             

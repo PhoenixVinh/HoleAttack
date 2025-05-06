@@ -1,12 +1,14 @@
 
 using System.Threading.Tasks;
 using _Scripts.Booster;
+using _Scripts.Event;
 using _Scripts.Map.MapSpawnItem;
 using _Scripts.ObjectPooling;
 using _Scripts.Tutorial;
 using _Scripts.UI;
 using _Scripts.UI.MissionUI;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 
 public class ManagerLevelGamePlay : MonoBehaviour
@@ -68,13 +70,16 @@ public class ManagerLevelGamePlay : MonoBehaviour
         HoleController.Instance.Reset();
         HoleController.Instance.SetPosition(Vector3.zero);
         HoleController.Instance.gameObject.SetActive(false);
+        
         Task.Delay(200);
         SpawnItemMap.Instance.SetData(level.levelSpawnData, level.ScoreDatas);
         ManagerMission.Instance.SetData(level.missionData);
-        ColdownTime.Instance.SetData(level.timeToComplete);
+        
         Task.Delay(100);
-        HoleController.Instance.gameObject.SetActive(true);
+        ColdownTime.Instance.SetData(level.timeToComplete);
         ManagerBooster.Instance.SetData();
+        HoleController.Instance.gameObject.SetActive(true);
+        CameraFOVEvent.OnStarLevelEvent?.Invoke();
 
         return Task.FromResult(true);
 
@@ -94,5 +99,11 @@ public class ManagerLevelGamePlay : MonoBehaviour
         {
             Debug.LogError($"You are at The Max Level");
         }
+    }
+
+    public void LoadLevelAgain()
+    {
+        ManagerTutorial.Instance.ShowTutorials(currentLevel);
+        SpawnLevel();
     }
 }

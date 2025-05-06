@@ -9,7 +9,9 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: car_1_mtl
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _GLOSSYREFLECTIONS_OFF
+  - _SPECULARHIGHLIGHTS_OFF
   m_InvalidKeywords:
   - TCP2_COLORS_AS_NORMALS
   - TCP2_ZSMOOTH_ON
@@ -71,7 +73,7 @@ Material:
     - _DstBlendOutline: 10
     - _GlossMapScale: 1
     - _Glossiness: 0.30996522
-    - _GlossyReflections: 1
+    - _GlossyReflections: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -82,7 +84,7 @@ Material:
     - _RampSmooth: 0.414
     - _RampThreshold: 0.601
     - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
+    - _SpecularHighlights: 0
     - _SrcBlend: 1
     - _SrcBlendOutline: 5
     - _TexLod: 5
