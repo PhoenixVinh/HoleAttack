@@ -35,8 +35,7 @@ namespace _Scripts.Editor.Ultils
 
         public bool ShowEditorSize = false;
         public List<Scale> Size;
-        
-        
+        private Vector3 scrollPosition = new Vector3(0, 0, 0);
         public void OnGUI()
         {
             
@@ -82,9 +81,10 @@ namespace _Scripts.Editor.Ultils
               
                 
                 //GUILayout.BeginVertical();
-                EditorGUI.BeginChangeCheck();
                 
                 int index = 0;
+                scrollPosition = GUILayout.BeginScrollView(scrollPosition);
+                EditorGUI.BeginChangeCheck();
                 foreach (var item in itemDatas)
                 {
                 
@@ -98,12 +98,12 @@ namespace _Scripts.Editor.Ultils
                     GUILayout.EndHorizontal();
                     index++;
                 }
-                EditorGUILayout.EndScrollView();
+                GUILayout.EndScrollView();
                 if (EditorGUI.EndChangeCheck())
                 {
                     ShowItemAgain();
                 }
-                
+               
 
      
             }
