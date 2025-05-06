@@ -77,7 +77,7 @@ namespace _Scripts.Map.MapSpawnItem
             foreach(var item in levelSpawnData.listItemSpawns)
             {
                 string nameItem = item.id;
-                Debug.Log(nameItem + " Spawned: " + "With Size: " + item.listSpawnDatas[0].s.ToVector3().ToString());
+                
                 GameObject prefabInstance = null;
                 if (!spawnedObjects.ContainsKey(nameItem))
                 {

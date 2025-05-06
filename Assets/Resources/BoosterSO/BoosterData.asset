@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Boosters:
   - Name: B_scale
-    Amount: 1
+    Amount: 0
     LevelCanUse: 2
   - Name: B_Magnet
     Amount: 2
-    LevelCanUse: 3
+    LevelCanUse: 2
   - Name: B_Location
     Amount: 2
-    LevelCanUse: 4
+    LevelCanUse: 2
   - Name: B_Ice
-    Amount: 3
-    LevelCanUse: 5
+    Amount: 2
+    LevelCanUse: 2
