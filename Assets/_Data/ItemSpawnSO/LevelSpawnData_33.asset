@@ -11,18 +11,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e071bb4379b44fc8bfef60dece523cf5, type: 3}
   m_Name: LevelSpawnData_33
-  m_EditorClassIdentifier:
-  serializationData:
-    SerializedFormat: 0
-    SerializedBytes:
-    ReferencedUnityObjects: []
-    SerializedBytesString:
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
+  m_EditorClassIdentifier: 
   listItemSpawns:
-  - id: food_334
+  - id: food_87
     listSpawnDatas:
     - p:
         x: 11.651273
@@ -492,7 +483,7 @@ MonoBehaviour:
         y: 1
         z: 1
       kinematic: 1
-  - id: food_324
+  - id: food_103
     listSpawnDatas:
     - p:
         x: 15.25
@@ -509,7 +500,7 @@ MonoBehaviour:
       kinematic: 1
     - p:
         x: 0.2499981
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: 8.850002
       r:
         x: 0
@@ -533,7 +524,7 @@ MonoBehaviour:
         y: 1
         z: 1
       kinematic: 1
-  - id: food_331
+  - id: food_199
     listSpawnDatas:
     - p:
         x: 15.25
@@ -544,9 +535,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 17.25
@@ -557,9 +548,9 @@ MonoBehaviour:
         y: 30.000002
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 18.71
@@ -570,9 +561,9 @@ MonoBehaviour:
         y: 60.000004
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 19.25
@@ -583,9 +574,9 @@ MonoBehaviour:
         y: 90
         z: 0
       s:
-        x: 1.0000005
-        y: 1
-        z: 1.0000005
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 18.71
@@ -596,9 +587,9 @@ MonoBehaviour:
         y: 120.00001
         z: 0
       s:
-        x: 1.0000002
-        y: 1
-        z: 1.0000002
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 17.25
@@ -609,9 +600,9 @@ MonoBehaviour:
         y: 150
         z: 0
       s:
-        x: 0.9999999
-        y: 1
-        z: 0.9999999
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 15.25
@@ -622,9 +613,9 @@ MonoBehaviour:
         y: 180
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 13.25
@@ -635,9 +626,9 @@ MonoBehaviour:
         y: 210
         z: 0
       s:
-        x: 1.0000007
-        y: 1
-        z: 1.0000007
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 11.79
@@ -648,9 +639,9 @@ MonoBehaviour:
         y: 240
         z: 0
       s:
-        x: 1.0000005
-        y: 1
-        z: 1.0000005
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 11.25
@@ -661,9 +652,9 @@ MonoBehaviour:
         y: 270
         z: 0
       s:
-        x: 1.0000005
-        y: 1
-        z: 1.0000005
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 11.79
@@ -674,9 +665,9 @@ MonoBehaviour:
         y: 300
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 13.25
@@ -687,9 +678,9 @@ MonoBehaviour:
         y: 330
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -20.12804
@@ -700,9 +691,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -18.12804
@@ -713,9 +704,9 @@ MonoBehaviour:
         y: 30.000002
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -16.66804
@@ -726,9 +717,9 @@ MonoBehaviour:
         y: 60.000004
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -16.128044
@@ -739,9 +730,9 @@ MonoBehaviour:
         y: 90
         z: 0
       s:
-        x: 1.0000005
-        y: 1
-        z: 1.0000005
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -16.668041
@@ -752,9 +743,9 @@ MonoBehaviour:
         y: 120.00001
         z: 0
       s:
-        x: 1.0000002
-        y: 1
-        z: 1.0000002
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -18.128038
@@ -765,9 +756,9 @@ MonoBehaviour:
         y: 150
         z: 0
       s:
-        x: 0.9999999
-        y: 1
-        z: 0.9999999
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -20.12804
@@ -778,9 +769,9 @@ MonoBehaviour:
         y: 180
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -22.128048
@@ -791,9 +782,9 @@ MonoBehaviour:
         y: 210
         z: 0
       s:
-        x: 1.0000007
-        y: 1
-        z: 1.0000007
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -23.588043
@@ -804,9 +795,9 @@ MonoBehaviour:
         y: 240
         z: 0
       s:
-        x: 1.0000005
-        y: 1
-        z: 1.0000005
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -24.128044
@@ -817,9 +808,9 @@ MonoBehaviour:
         y: 270
         z: 0
       s:
-        x: 1.0000005
-        y: 1
-        z: 1.0000005
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -23.588041
@@ -830,9 +821,9 @@ MonoBehaviour:
         y: 300
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -22.12804
@@ -843,11 +834,11 @@ MonoBehaviour:
         y: 330
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
-  - id: food_320
+  - id: food_106
     listSpawnDatas:
     - p:
         x: -3.7897325
@@ -858,9 +849,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -3.7897325
@@ -871,9 +862,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -3.7897325
@@ -884,9 +875,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -3.7897325
@@ -897,9 +888,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -3.7897325
@@ -910,9 +901,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -2.2897325
@@ -923,9 +914,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -2.2897322
@@ -936,9 +927,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -2.2897325
@@ -949,9 +940,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -2.2897325
@@ -962,9 +953,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -2.2897325
@@ -975,9 +966,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -0.78973246
@@ -988,9 +979,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -0.78973246
@@ -1001,9 +992,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -0.78973246
@@ -1014,9 +1005,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -0.78973246
@@ -1027,9 +1018,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -0.78973246
@@ -1040,9 +1031,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 0.71026736
@@ -1053,9 +1044,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 0.71026754
@@ -1066,9 +1057,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 0.71026754
@@ -1079,9 +1070,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 0.71026754
@@ -1092,9 +1083,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 0.71026754
@@ -1105,9 +1096,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 2.2102675
@@ -1118,9 +1109,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 2.2102675
@@ -1131,9 +1122,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 2.2102675
@@ -1144,9 +1135,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 2.2102675
@@ -1157,9 +1148,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 2.2102675
@@ -1170,9 +1161,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 3.7102675
@@ -1183,9 +1174,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 3.7102675
@@ -1196,9 +1187,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 3.7102675
@@ -1209,9 +1200,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 3.7102675
@@ -1222,9 +1213,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 3.7102675
@@ -1235,199 +1226,199 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
-  - id: food_323
+  - id: food_216
     listSpawnDatas:
     - p:
         x: 0.2499981
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: 12.850002
       r:
         x: 0
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 1.9899979
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: 12.450002
       r:
         x: 0
         y: 25.71
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 3.3799992
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: 11.340003
       r:
         x: 0
         y: 51.43
         z: 0
       s:
-        x: 1.0000002
-        y: 1
-        z: 1.0000002
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 4.1500006
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: 9.740004
       r:
         x: 0
         y: 77.14
         z: 0
       s:
-        x: 1.0000002
-        y: 1
-        z: 1.0000002
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 4.149996
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: 7.96
       r:
         x: 0
         y: 102.86
         z: 0
       s:
-        x: 0.99999976
-        y: 1
-        z: 0.99999976
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 3.380001
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: 6.360002
       r:
         x: 0
         y: 128.57
         z: 0
       s:
-        x: 1.0000002
-        y: 1
-        z: 1.0000002
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 1.9899979
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: 5.250003
       r:
         x: 0
         y: 154.29
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 0.2499981
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: 4.8500023
       r:
         x: 0
         y: 180
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -1.4899979
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: 5.2500057
       r:
         x: 0
         y: 205.71
         z: 0
       s:
-        x: 1.0000005
-        y: 1
-        z: 1.0000005
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -2.8799982
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: 6.360005
       r:
         x: 0
         y: 231.43001
         z: 0
       s:
-        x: 1.0000005
-        y: 1
-        z: 1.0000005
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -3.6499977
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: 7.960004
       r:
         x: 0
         y: 257.14
         z: 0
       s:
-        x: 1.0000005
-        y: 1
-        z: 1.0000005
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -3.6500006
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: 9.740003
       r:
         x: 0
         y: 282.86
         z: 0
       s:
-        x: 1.0000002
-        y: 1
-        z: 1.0000002
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -2.88
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: 11.340004
       r:
         x: 0
         y: 308.57
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -1.4900017
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: 12.450002
       r:
         x: 0
         y: 334.29
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
-  - id: food_369
+  - id: food_188
     listSpawnDatas:
     - p:
         x: -2.3495178
-        y: 5.9604645E-07
+        y: 0.00000059604645
         z: 34.21169
       r:
         x: 0
@@ -1440,7 +1431,7 @@ MonoBehaviour:
       kinematic: 1
     - p:
         x: 2.4104824
-        y: 5.9604645E-07
+        y: 0.00000059604645
         z: 34.21169
       r:
         x: 0
@@ -1477,7 +1468,7 @@ MonoBehaviour:
         y: 1
         z: 1
       kinematic: 1
-  - id: food_356
+  - id: food_541
     listSpawnDatas:
     - p:
         x: 12.75
@@ -1488,9 +1479,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 12.75
@@ -1501,9 +1492,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 12.75
@@ -1514,9 +1505,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 15.25
@@ -1527,9 +1518,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 15.25
@@ -1540,9 +1531,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 15.25
@@ -1553,9 +1544,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 17.75
@@ -1566,9 +1557,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 17.75
@@ -1579,9 +1570,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 17.75
@@ -1592,9 +1583,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 20.25
@@ -1605,9 +1596,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 20.25
@@ -1618,9 +1609,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 20.25
@@ -1631,9 +1622,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 22.75
@@ -1644,9 +1635,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 22.75
@@ -1657,9 +1648,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 22.75
@@ -1670,9 +1661,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 25.25
@@ -1683,9 +1674,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 25.25
@@ -1696,9 +1687,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 25.25
@@ -1709,9 +1700,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 27.75
@@ -1722,9 +1713,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 27.75
@@ -1735,9 +1726,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 27.75
@@ -1748,128 +1739,9 @@ MonoBehaviour:
         y: 20.000011
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
-      kinematic: 1
-  - id: food_480
-    listSpawnDatas:
-    - p:
-        x: -22.95
-        y: 0
-        z: 17.1
-      r:
-        x: 0
-        y: 0
-        z: 0
-      s:
-        x: 1
-        y: 1
-        z: 1
-      kinematic: 1
-    - p:
-        x: -22.95
-        y: 0
-        z: 20.1
-      r:
-        x: 0
-        y: 0
-        z: 0
-      s:
-        x: 1
-        y: 1
-        z: 1
-      kinematic: 1
-    - p:
-        x: -22.95
-        y: 0
-        z: 23.1
-      r:
-        x: 0
-        y: 0
-        z: 0
-      s:
-        x: 1
-        y: 1
-        z: 1
-      kinematic: 1
-    - p:
-        x: -20.25
-        y: 0
-        z: 17.1
-      r:
-        x: 0
-        y: 0
-        z: 0
-      s:
-        x: 1
-        y: 1
-        z: 1
-      kinematic: 1
-    - p:
-        x: -20.25
-        y: 0
-        z: 20.1
-      r:
-        x: 0
-        y: 0
-        z: 0
-      s:
-        x: 1
-        y: 1
-        z: 1
-      kinematic: 1
-    - p:
-        x: -20.25
-        y: 0
-        z: 23.1
-      r:
-        x: 0
-        y: 0
-        z: 0
-      s:
-        x: 1
-        y: 1
-        z: 1
-      kinematic: 1
-    - p:
-        x: -17.55
-        y: 0
-        z: 17.1
-      r:
-        x: 0
-        y: 0
-        z: 0
-      s:
-        x: 1
-        y: 1
-        z: 1
-      kinematic: 1
-    - p:
-        x: -17.55
-        y: 0
-        z: 20.1
-      r:
-        x: 0
-        y: 0
-        z: 0
-      s:
-        x: 1
-        y: 1
-        z: 1
-      kinematic: 1
-    - p:
-        x: -17.55
-        y: 0
-        z: 23.1
-      r:
-        x: 0
-        y: 0
-        z: 0
-      s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
   - id: food_528
     listSpawnDatas:
@@ -1990,7 +1862,7 @@ MonoBehaviour:
         y: 1
         z: 1
       kinematic: 1
-  - id: food_524
+  - id: food_9
     listSpawnDatas:
     - p:
         x: -10.25
@@ -2027,9 +1899,9 @@ MonoBehaviour:
         y: 120.00001
         z: 0
       s:
-        x: 1.0000002
+        x: 1
         y: 1
-        z: 1.0000002
+        z: 1
       kinematic: 1
     - p:
         x: -10.25
@@ -2053,9 +1925,9 @@ MonoBehaviour:
         y: 240
         z: 0
       s:
-        x: 1.0000005
+        x: 1
         y: 1
-        z: 1.0000005
+        z: 1
       kinematic: 1
     - p:
         x: -12.85
@@ -2070,7 +1942,7 @@ MonoBehaviour:
         y: 1
         z: 1
       kinematic: 1
-  - id: food_359
+  - id: food_219
     listSpawnDatas:
     - p:
         x: 34.49141
@@ -2107,9 +1979,9 @@ MonoBehaviour:
         y: 120.00001
         z: 0
       s:
-        x: 1.0000002
+        x: 1
         y: 1
-        z: 1.0000002
+        z: 1
       kinematic: 1
     - p:
         x: 34.49141
@@ -2133,9 +2005,9 @@ MonoBehaviour:
         y: 240
         z: 0
       s:
-        x: 1.0000005
+        x: 1
         y: 1
-        z: 1.0000005
+        z: 1
       kinematic: 1
     - p:
         x: 31.891413
@@ -2185,9 +2057,9 @@ MonoBehaviour:
         y: 120.00001
         z: 0
       s:
-        x: 1.0000002
+        x: 1
         y: 1
-        z: 1.0000002
+        z: 1
       kinematic: 1
     - p:
         x: 5.3371773
@@ -2211,9 +2083,9 @@ MonoBehaviour:
         y: 240
         z: 0
       s:
-        x: 1.0000005
+        x: 1
         y: 1
-        z: 1.0000005
+        z: 1
       kinematic: 1
     - p:
         x: 2.737177
@@ -2228,7 +2100,7 @@ MonoBehaviour:
         y: 1
         z: 1
       kinematic: 1
-  - id: food_370
+  - id: food_187
     listSpawnDatas:
     - p:
         x: 22.837173
@@ -2271,7 +2143,7 @@ MonoBehaviour:
         y: 1
         z: 1
       kinematic: 1
-  - id: food_346
+  - id: food_122
     listSpawnDatas:
     - p:
         x: 12.837173
@@ -2282,9 +2154,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 15.43717
@@ -2295,9 +2167,9 @@ MonoBehaviour:
         y: 60.000004
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 15.437178
@@ -2308,9 +2180,9 @@ MonoBehaviour:
         y: 120.00001
         z: 0
       s:
-        x: 1.0000002
-        y: 1
-        z: 1.0000002
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 12.837177
@@ -2321,9 +2193,9 @@ MonoBehaviour:
         y: 180
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 10.237177
@@ -2334,9 +2206,9 @@ MonoBehaviour:
         y: 240
         z: 0
       s:
-        x: 1.0000005
-        y: 1
-        z: 1.0000005
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 10.237177
@@ -2347,9 +2219,9 @@ MonoBehaviour:
         y: 300
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
   - id: food_10
     listSpawnDatas:
@@ -2414,9 +2286,9 @@ MonoBehaviour:
         y: 80
         z: 0
       s:
-        x: 1.0000002
+        x: 1
         y: 1
-        z: 1.0000002
+        z: 1
       kinematic: 1
     - p:
         x: -26.246586
@@ -2427,9 +2299,9 @@ MonoBehaviour:
         y: 99.99999
         z: 0
       s:
-        x: 1.0000002
+        x: 1
         y: 1
-        z: 1.0000002
+        z: 1
       kinematic: 1
     - p:
         x: -27.31659
@@ -2440,9 +2312,9 @@ MonoBehaviour:
         y: 120.00001
         z: 0
       s:
-        x: 1.0000002
+        x: 1
         y: 1
-        z: 1.0000002
+        z: 1
       kinematic: 1
     - p:
         x: -29.316586
@@ -2453,9 +2325,9 @@ MonoBehaviour:
         y: 140
         z: 0
       s:
-        x: 0.9999999
+        x: 1
         y: 1
-        z: 0.9999999
+        z: 1
       kinematic: 1
     - p:
         x: -32.026604
@@ -2466,9 +2338,9 @@ MonoBehaviour:
         y: 160
         z: 0
       s:
-        x: 1.0000006
+        x: 1
         y: 1
-        z: 1.0000006
+        z: 1
       kinematic: 1
     - p:
         x: -35.106586
@@ -2492,9 +2364,9 @@ MonoBehaviour:
         y: 200
         z: 0
       s:
-        x: 1.0000005
+        x: 1
         y: 1
-        z: 1.0000005
+        z: 1
       kinematic: 1
     - p:
         x: -40.896606
@@ -2505,9 +2377,9 @@ MonoBehaviour:
         y: 220
         z: 0
       s:
-        x: 1.0000007
+        x: 1
         y: 1
-        z: 1.0000007
+        z: 1
       kinematic: 1
     - p:
         x: -42.8966
@@ -2518,9 +2390,9 @@ MonoBehaviour:
         y: 240
         z: 0
       s:
-        x: 1.0000005
+        x: 1
         y: 1
-        z: 1.0000005
+        z: 1
       kinematic: 1
     - p:
         x: -43.966595
@@ -2570,9 +2442,9 @@ MonoBehaviour:
         y: 320
         z: 0
       s:
-        x: 1.0000002
+        x: 1
         y: 1
-        z: 1.0000002
+        z: 1
       kinematic: 1
     - p:
         x: -38.186584
@@ -2602,7 +2474,7 @@ MonoBehaviour:
       kinematic: 1
     - p:
         x: -14.66446
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: -7.371541
       r:
         x: 0
@@ -2615,7 +2487,7 @@ MonoBehaviour:
       kinematic: 1
     - p:
         x: -11.834461
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: -8.541541
       r:
         x: 0
@@ -2628,59 +2500,59 @@ MonoBehaviour:
       kinematic: 1
     - p:
         x: -10.664457
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: -11.371542
       r:
         x: 0
         y: 110
         z: 0
       s:
-        x: 1.0000002
+        x: 1
         y: 1
-        z: 1.0000002
+        z: 1
       kinematic: 1
     - p:
         x: -11.834458
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: -14.201544
       r:
         x: 0
         y: 155
         z: 0
       s:
-        x: 1.0000002
+        x: 1
         y: 1
-        z: 1.0000002
+        z: 1
       kinematic: 1
     - p:
         x: -14.664457
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: -15.371538
       r:
         x: 0
         y: 200
         z: 0
       s:
-        x: 1.0000005
+        x: 1
         y: 1
-        z: 1.0000005
+        z: 1
       kinematic: 1
     - p:
         x: -17.494461
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: -14.201544
       r:
         x: 0
         y: 245
         z: 0
       s:
-        x: 0.9999999
+        x: 1
         y: 1
-        z: 0.9999999
+        z: 1
       kinematic: 1
     - p:
         x: -18.66446
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: -11.371543
       r:
         x: 0
@@ -2693,7 +2565,7 @@ MonoBehaviour:
       kinematic: 1
     - p:
         x: -17.49446
-        y: 2.9802322E-07
+        y: 0.00000029802322
         z: -8.541542
       r:
         x: 0
@@ -2739,9 +2611,9 @@ MonoBehaviour:
         y: 90
         z: 0
       s:
-        x: 1.0000005
+        x: 1
         y: 1
-        z: 1.0000005
+        z: 1
       kinematic: 1
     - p:
         x: 2.83
@@ -2752,9 +2624,9 @@ MonoBehaviour:
         y: 135
         z: 0
       s:
-        x: 1.0000005
+        x: 1
         y: 1
-        z: 1.0000005
+        z: 1
       kinematic: 1
     - p:
         x: 0
@@ -2778,9 +2650,9 @@ MonoBehaviour:
         y: 224.99998
         z: 0
       s:
-        x: 0.99999976
+        x: 1
         y: 1
-        z: 0.99999976
+        z: 1
       kinematic: 1
     - p:
         x: -4
@@ -2791,9 +2663,9 @@ MonoBehaviour:
         y: 270
         z: 0
       s:
-        x: 1.0000005
+        x: 1
         y: 1
-        z: 1.0000005
+        z: 1
       kinematic: 1
     - p:
         x: -2.83
@@ -2808,7 +2680,7 @@ MonoBehaviour:
         y: 1
         z: 1
       kinematic: 1
-  - id: food_357
+  - id: food_207
     listSpawnDatas:
     - p:
         x: -38.35659
@@ -2819,9 +2691,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -31.85659
@@ -2832,9 +2704,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
   - id: food_529
     listSpawnDatas:
@@ -2860,71 +2732,15 @@ MonoBehaviour:
         y: 280.66
         z: 0.64999974
       s:
-        x: 1.0000005
-        y: 1
-        z: 1.0000005
-      kinematic: 1
-  - id: food_2
-    listSpawnDatas:
-    - p:
-        x: -31.85659
-        y: 0
-        z: -20.885008
-      r:
-        x: 0
-        y: 20.000011
-        z: 0
-      s:
         x: 1
         y: 1
         z: 1
       kinematic: 1
-    - p:
-        x: -30.35659
-        y: 0
-        z: -19.885008
-      r:
-        x: 0
-        y: 20.000011
-        z: 0
-      s:
-        x: 1
-        y: 1
-        z: 1
-      kinematic: 1
-    - p:
-        x: -39.85659
-        y: 0
-        z: -19.885006
-      r:
-        x: 0
-        y: 20.000011
-        z: 0
-      s:
-        x: 1
-        y: 1
-        z: 1
-      kinematic: 1
-  - id: food_333
-    listSpawnDatas:
-    - p:
-        x: -26.35659
-        y: 0
-        z: -24.885008
-      r:
-        x: 0
-        y: 20.000011
-        z: 0
-      s:
-        x: 1
-        y: 1
-        z: 1
-      kinematic: 1
-  - id: food_51
+  - id: food_53
     listSpawnDatas:
     - p:
         x: -14.66446
-        y: 2.3841858E-07
+        y: 0.00000023841858
         z: -11.371542
       r:
         x: 0
@@ -2935,7 +2751,7 @@ MonoBehaviour:
         y: 1
         z: 1
       kinematic: 1
-  - id: food_361
+  - id: food_501
     listSpawnDatas:
     - p:
         x: 23.5
@@ -2989,7 +2805,7 @@ MonoBehaviour:
         y: 1
         z: 1
       kinematic: 1
-  - id: food_416
+  - id: food_130
     listSpawnDatas:
     - p:
         x: 0
@@ -3004,7 +2820,7 @@ MonoBehaviour:
         y: 1
         z: 1
       kinematic: 1
-  - id: food_1
+  - id: food_487
     listSpawnDatas:
     - p:
         x: -4.2479935
@@ -3015,9 +2831,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -4.2479935
@@ -3028,9 +2844,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -4.2479935
@@ -3041,9 +2857,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -4.2479935
@@ -3054,9 +2870,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -4.2479935
@@ -3067,9 +2883,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -4.2479935
@@ -3080,9 +2896,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -4.2479935
@@ -3093,9 +2909,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -4.2479935
@@ -3106,9 +2922,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -4.2479935
@@ -3119,9 +2935,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -3.1479933
@@ -3132,9 +2948,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -3.1479933
@@ -3145,9 +2961,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -2.0479934
@@ -3158,9 +2974,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -2.0479934
@@ -3171,9 +2987,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -0.94799334
@@ -3184,9 +3000,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: -0.94799334
@@ -3197,9 +3013,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 0.15200669
@@ -3210,9 +3026,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 0.15200669
@@ -3223,9 +3039,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 1.2520068
@@ -3236,9 +3052,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 1.2520068
@@ -3249,9 +3065,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 2.3520067
@@ -3262,9 +3078,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 2.3520067
@@ -3275,9 +3091,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 3.4520066
@@ -3288,9 +3104,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 3.4520066
@@ -3301,9 +3117,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 4.5520067
@@ -3314,9 +3130,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 4.5520067
@@ -3327,9 +3143,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 4.5520067
@@ -3340,9 +3156,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 4.5520067
@@ -3353,9 +3169,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 4.5520067
@@ -3366,9 +3182,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 4.5520067
@@ -3379,9 +3195,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 4.5520067
@@ -3392,9 +3208,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 4.5520067
@@ -3405,9 +3221,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
     - p:
         x: 4.5520067
@@ -3418,11 +3234,11 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
-  - id: food_366
+  - id: food_195
     listSpawnDatas:
     - p:
         x: 0.15200669
@@ -3543,9 +3359,9 @@ MonoBehaviour:
         y: 80
         z: 0
       s:
-        x: 1.0000002
+        x: 1
         y: 1
-        z: 1.0000002
+        z: 1
       kinematic: 1
     - p:
         x: -17.151516
@@ -3556,9 +3372,9 @@ MonoBehaviour:
         y: 140
         z: 0
       s:
-        x: 0.9999999
+        x: 1
         y: 1
-        z: 0.9999999
+        z: 1
       kinematic: 1
     - p:
         x: -20.147738
@@ -3569,9 +3385,9 @@ MonoBehaviour:
         y: 200
         z: 0
       s:
-        x: 1.0000005
+        x: 1
         y: 1
-        z: 1.0000005
+        z: 1
       kinematic: 1
     - p:
         x: -17.121817
@@ -3595,11 +3411,11 @@ MonoBehaviour:
         y: 320
         z: 0
       s:
-        x: 1.0000002
+        x: 1
         y: 1
-        z: 1.0000002
+        z: 1
       kinematic: 1
-  - id: food_360
+  - id: food_50
     listSpawnDatas:
     - p:
         x: -32.999996
@@ -3623,9 +3439,9 @@ MonoBehaviour:
         y: 52
         z: 0
       s:
-        x: 1.0000002
+        x: 1
         y: 1
-        z: 1.0000002
+        z: 1
       kinematic: 1
     - p:
         x: -31.240002
@@ -3636,9 +3452,9 @@ MonoBehaviour:
         y: 123.99999
         z: 0
       s:
-        x: 0.9999998
+        x: 1
         y: 1
-        z: 0.9999998
+        z: 1
       kinematic: 1
     - p:
         x: -34.759995
@@ -3649,9 +3465,9 @@ MonoBehaviour:
         y: 196
         z: 0
       s:
-        x: 1.0000007
+        x: 1
         y: 1
-        z: 1.0000007
+        z: 1
       kinematic: 1
     - p:
         x: -35.849995
@@ -3662,11 +3478,11 @@ MonoBehaviour:
         y: 267.99994
         z: 0
       s:
-        x: 0.99999976
+        x: 1
         y: 1
-        z: 0.99999976
+        z: 1
       kinematic: 1
-  - id: food_367
+  - id: food_132
     listSpawnDatas:
     - p:
         x: -22.999996
@@ -3692,11 +3508,11 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.5
+        y: 0.5
+        z: 0.5
       kinematic: 1
-  - id: food_365
+  - id: food_120
     listSpawnDatas:
     - p:
         x: 23.5
@@ -3707,9 +3523,9 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.7
+        y: 0.7
+        z: 0.7
       kinematic: 1
     - p:
         x: 23.5
@@ -3720,15 +3536,15 @@ MonoBehaviour:
         y: 0
         z: 0
       s:
-        x: 1
-        y: 1
-        z: 1
+        x: 0.7
+        y: 0.7
+        z: 0.7
       kinematic: 1
   - id: food_12
     listSpawnDatas:
     - p:
         x: 8.306728
-        y: 5.9604645E-07
+        y: 0.00000059604645
         z: 34.128796
       r:
         x: 0
@@ -3752,47 +3568,6 @@ MonoBehaviour:
       s:
         x: 1
         y: 1
-        z: 1
-      kinematic: 1
-  - id: food_457
-    listSpawnDatas:
-    - p:
-        x: -22.083708
-        y: 0.47
-        z: 34.002796
-      r:
-        x: 352.96
-        y: 340.69
-        z: 353.53
-      s:
-        x: 1
-        y: 1
-        z: 1
-      kinematic: 1
-    - p:
-        x: -21.713707
-        y: 0.47
-        z: 35.032795
-      r:
-        x: 354.29
-        y: 316.3
-        z: 355.69
-      s:
-        x: 1.0000001
-        y: 1
-        z: 0.9999999
-      kinematic: 1
-    - p:
-        x: -21.953709
-        y: 0.39
-        z: 33.002796
-      r:
-        x: 354.41
-        y: 311.73
-        z: 353.33
-      s:
-        x: 0.9999999
-        y: 1.0000002
         z: 1
       kinematic: 1
   - id: food_558
@@ -3838,7 +3613,7 @@ MonoBehaviour:
         y: 1
         z: 1
       kinematic: 1
-  - id: food_358
+  - id: food_92
     listSpawnDatas:
     - p:
         x: 21.888924
